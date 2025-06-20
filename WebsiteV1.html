@@ -116,7 +116,7 @@
 
     /* Nav Bar */
     #sidebar{
-        display: grid;
+        display: inline-block;
         width: 150px;
         height: 100vh;
         white-space: nowrap;
@@ -131,7 +131,7 @@
         font-size: 13px;
         color: cornsilk;
         border: 0px;
-        width: 100%;
+        width: 100vw;
         padding: 8px;
     }
 
@@ -139,54 +139,19 @@
         background-color: rgb(255, 97, 97);
     }
 
-    /* Main Page */
-
     /* Tabs */
     .tab{
         font-style: normal;
         font-size: 13px;
         font-family: Arial, Helvetica, sans-serif;
         align-items: top;
-        margin-top: 200px;
+        margin-top: 100px;
     }
     .tab.left{
         justify-content: left;
     }
     .tab.center{
         justify-content: center;
-    }
-    #home{
-
-    }
-    #profile{
-
-    }
-    #login{
-
-    }
-    #calendars{
-
-    }
-    #createClass{
-
-    }
-    #manageClass{
-
-    }
-    #createEvent{
-
-    }
-    #importSched{
-
-    }
-    #groups{
-
-    }
-    #findUser{
-        align-items: center;
-    }
-    #settings{
-
     }
 
     /* Fonts */
@@ -244,7 +209,6 @@
         // Close Other Tabs First 
         closeTabs();
         // Open Correct Tab
-        var homeTab = document.getElementById("home");
         homeTab.style.display = "flex";
     }
     function loginOpen(){
