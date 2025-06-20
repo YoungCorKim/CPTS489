@@ -10,10 +10,47 @@
     <body>
 
         <div class="mainLayout">
+            <!-- This is the Side Navbar -->
+            <div id="sidebar">
+                <button class="sideButton" onclick="">
+                    Home
+                </button>
+                <button class="sideButton" onclick="">
+                    Profile/Login
+                </button>
+                <button class="sideButton" onclick="">
+                    Calendars
+                </button>
+
+                <!-- These Will Need to Be Professor Only Eventually -->
+                <button class="sideButton" onclick="">
+                    Create Class
+                </button>
+
+                <!-- These Will Only Be A Student View Eventually -->
+                <button class="sideButton" onclick="">
+                    Create Event
+                </button>
+                <button class="sideButton" onclick="">
+                    Import Schedule
+                </button>
+                <button class="sideButton" onclick="">
+                    Groups
+                </button>
+
+                <!-- Utilities For Everyone -->
+                <button class="sideButton" onclick="">
+                    Find User
+                </button>
+                <button class="sideButton" onclick="">
+                    Settings
+                </button>
+            </div>
             <!-- Each Of These is a Tab and Is Set to None Display So It Is Hidden -->
             <div class="tab.left" id="mainTab">
 
             </div>
+
             <div class="tab.center" id="createClassProf" style="display: none;">
 
             </div>
@@ -24,6 +61,30 @@
 <style>
     .p{
 
+    }
+
+    /* Nav Bar */
+    #sidebar{
+        display: block;
+        width: 250px;
+        justify-content: left;
+        align-items: top;
+        margin: 0px 50px 0px;
+        background-color: red;
+    }
+
+    .sideButton{
+        background-color: red;
+        cursor: pointer;
+        font-size: 13px;
+        color: cornsilk;
+        border: 0px;
+        margin: 0px;
+        padding: 15px;
+    }
+
+    .sideButton:hover{
+        background-color: rgb(255, 97, 97);
     }
 
     /* Main Page */
