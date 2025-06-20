@@ -9,50 +9,90 @@
 
     <body>
 
-        <div class="mainLayout">
+        <div id="mainLayout">
             <!-- This is the Side Navbar -->
             <div id="sidebar">
-                <button class="sideButton" onclick="">
+                <button class="sideButton" onclick="homeOpen()">
                     Home
                 </button>
-                <button class="sideButton" onclick="">
-                    Profile/Login
+                <button class="sideButton" onclick="loginOpen()">
+                    Login
                 </button>
-                <button class="sideButton" onclick="">
+                <button class="sideButton" onclick="profileOpen()">
+                    Profile
+                </button>
+                <button class="sideButton" onclick="calendarsOpen()">
                     Calendars
                 </button>
 
                 <!-- These Will Need to Be Professor Only Eventually -->
-                <button class="sideButton" onclick="">
+                <button class="sideButton" onclick="createClassOpen()">
                     Create Class
+                </button>
+                <button class="sideButton" onclick="manageClassOpen()">
+                    Manage Classes
                 </button>
 
                 <!-- These Will Only Be A Student View Eventually -->
-                <button class="sideButton" onclick="">
+                <button class="sideButton" onclick="createEventOpen()">
                     Create Event
                 </button>
-                <button class="sideButton" onclick="">
+                <button class="sideButton" onclick="importSchedOpen()">
                     Import Schedule
                 </button>
-                <button class="sideButton" onclick="">
+                <button class="sideButton" onclick="groupOpen()">
                     Groups
                 </button>
 
                 <!-- Utilities For Everyone -->
-                <button class="sideButton" onclick="">
+                <button class="sideButton" onclick="findOpen()">
                     Find User
                 </button>
-                <button class="sideButton" onclick="">
+                <button class="sideButton" onclick="settingsOpen()">
                     Settings
                 </button>
             </div>
             <!-- Each Of These is a Tab and Is Set to None Display So It Is Hidden -->
-            <div class="tab.left" id="mainTab">
 
+            <!-- Main Tabs -->
+            <div class="tab.left" id="home">
+                Main Text :D
+            </div>
+            <div class="tab.center" id="profile" style="display: none;">
+                Profile Info
+            </div>
+            <div class="tab.center" id="login" style="display: none;">
+                Login Page
+            </div>
+            <div class="tab.center" id="calendars" style="display: none;">
+                Calendar View
             </div>
 
-            <div class="tab.center" id="createClassProf" style="display: none;">
+            <!-- Professor Tabs -->
+            <div class="tab.center" id="createClass" style="display: none;">
+                Create Class Prof
+            </div>
+            <div class="tab.left" id="manageClass" style="display: none;">
+                Manage Classes
+            </div>
 
+            <!-- Student Tabs -->
+            <div class="tab.center" id="createEvent" style="display: none;">
+                Create Event
+            </div>
+            <div class="tab.center" id="importSched" style="display: none;">
+                Import a Calendar
+            </div>
+            <div class="tab.left" id="groups" style="display: none;">
+                View Groups
+            </div>
+
+            <!-- Utilities -->
+            <div class="tab.center" id="findUser" style="display: none;">
+                Find Someone
+            </div>
+            <div class="tab.left" id="settings" style="display: none;">
+                Settings!!
             </div>
         </div>
     </body>
@@ -63,10 +103,18 @@
 
     }
 
+    /* Main Layout */
+    #mainLayout{
+        display: flex;
+        justify-content: left;
+        align-items: top;
+    }
+
     /* Nav Bar */
     #sidebar{
         display: block;
-        width: 250px;
+        width: 150px;
+        white-space: nowrap;
         justify-content: left;
         align-items: top;
         margin: 0px 50px 0px;
@@ -111,4 +159,103 @@
 
 <script>
 
+    // Global Variables
+    var homeTab = document.getElementById("home");
+    var profileTab = document.getElementById("profile");
+    var loginTab = document.getElementById("login");
+    var calendarTab = document.getElementById("calendars");
+    var createClassTab = document.getElementById("createClass");
+    var manageClassTab = document.getElementById("manageClass");
+    var createEventTab = document.getElementById("createEvent");
+    var importTab = document.getElementById("importSched");
+    var groupTab = document.getElementById("groups");
+    var findTab = document.getElementById("findUser");
+    var settingTab = document.getElementById("Settings");
+
+    // Function to Close All Tabs By Blocking Display
+    function closeTabs(){
+        // We Probably Should Make This an If Student, Close These / Else if Prof, Close These
+
+        // Set All Displays to None
+        homeTab.style.display = "none";
+        profileTab.style.display = "none";
+        loginTab.style.display = "none";
+        calendarTab.style.display = "none";
+        createClassTab.style.display = "none";
+        manageClassTab.style.display = "none";
+        createEventTab.style.display = "none";
+        importTab.style.display = "none";
+        groupTab.style.display = "none";
+        findTab.style.display = "none";
+        settingTab.style.display = "none";
+    }
+
+    // Functions For Opening Individual Tabs
+    function homeOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        var homeTab = document.getElementById("home");
+        homeTab.style.display = "flex";
+    }
+    function loginOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        loginTab.style.display = "flex";
+    }
+    function profileOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        profileTab.style.display = "flex";
+    }
+    function calendarsOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Get and Open Correct Tab
+        calendarTab.style.display = "flex";
+    }
+    function createClassOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        createClassTab.style.display = "flex";
+    }
+    function manageClassOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        manageClassTab.style.display = "flex";
+    }
+    function createEventOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        createEventTab.style.display = "flex";
+    }
+    function importSchedOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        importTab.style.display = "flex";
+    }
+    function groupOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        groupTab.style.display = "flex";
+    }
+    function findOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        findTab.style.display = "flex";
+    }
+    function settingsOpen(){
+        // Close Other Tabs First 
+        closeTabs();
+        // Open Correct Tab
+        settingTab.style.display = "flex";
+    }
 </script>
