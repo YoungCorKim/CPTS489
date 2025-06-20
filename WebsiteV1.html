@@ -24,7 +24,6 @@
                 <button class="sideButton" onclick="calendarsOpen()">
                     Calendars
                 </button>
-
                 <!-- These Will Need to Be Professor Only Eventually -->
                 <button class="sideButton" onclick="createClassOpen()">
                     Create Class
@@ -32,7 +31,6 @@
                 <button class="sideButton" onclick="manageClassOpen()">
                     Manage Classes
                 </button>
-
                 <!-- These Will Only Be A Student View Eventually -->
                 <button class="sideButton" onclick="createEventOpen()">
                     Create Event
@@ -112,8 +110,9 @@
 
     /* Nav Bar */
     #sidebar{
-        display: block;
+        display: grid;
         width: 150px;
+        height: 100vh;
         white-space: nowrap;
         justify-content: left;
         align-items: top;
