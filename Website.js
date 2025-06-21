@@ -78,7 +78,7 @@ nextButton.addEventListener("click", () =>{
         thisYear++;
     }
     // Re-render the Calendar
-    renderCal();
+    renderCal(thisMonth, thisYear);
 });
 
 // Calendar Rendering
