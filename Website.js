@@ -94,10 +94,13 @@ function renderCal(month, year){
     var firstDay = new Date(year, month, 1).getDate();
     var endDay = new Date(year, month + 1, 1).getDate();
 
+    console.log("Rendering?");
+
     // Create Buffer Dates Up to First Date
     for (let i = 0; i < firstDay; i++){
         var buffer = document.createElement("div");
         calDatesHTML.appendChild(buffer);
+        console.log("Pre-Date")
     }
 
     // Add Days Within Boundary Dates
@@ -105,6 +108,7 @@ function renderCal(month, year){
         var newDay = document.createElement("div");
         newDay.value = j;
         calDatesHTML.appendChild(newDay);
+        console.log("Actual Date: " + j);
     }
 }
 
