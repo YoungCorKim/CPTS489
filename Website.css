@@ -53,7 +53,7 @@
     width: 100%;
 }
 
-#login, #findUser{
+#login{
     flex-direction: column;
     align-items: center;
     gap: 50px;
@@ -67,6 +67,10 @@
 #calendars{
     flex-direction: row;
     gap: 50px;
+}
+
+#findUser{
+    flex-direction: column;
 }
 
 /* Fonts */
