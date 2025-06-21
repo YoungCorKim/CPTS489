@@ -151,6 +151,8 @@ function calendarsOpen(){
     closeTabs();
     // Get and Open Correct Tab
     calendarTab.style.display = "flex";
+    // Also Render Calendar
+    renderCal(thisMonth, thisYear);
 }
 function createClassOpen(){
     // Close Other Tabs First 

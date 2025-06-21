@@ -182,6 +182,9 @@
 
 .calDates{
     color: rgb(119, 119, 119);
+    min-height: 75px;
+    border: 2px;
+    border-color: rgb(136, 16, 16);
 }
 
 .calWeekdays, .calDates{
