@@ -85,7 +85,7 @@ nextButton.addEventListener("click", () =>{
 function renderCal(month, year){
     // Clear Current Dates
     var calDatesHTML = document.getElementById("calDates");
-    calDatesHTML.innerHTML = '';
+    calDatesHTML.innerHTML = [];
 
     // Set Header Text
     document.getElementById("currentMonthYear").value = `${months[month]} ${year}`
@@ -107,7 +107,6 @@ function renderCal(month, year){
         calDatesHTML.appendChild(newDay);
     }
 }
-
 
 // Function to Close All Tabs By Blocking Display
 function closeTabs(){
