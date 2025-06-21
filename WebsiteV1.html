@@ -62,14 +62,14 @@
             </div>
             <div class="tab center" id="login" style="display: none;">
                 Login Page
-                <p boldfont>
+                <div class="p boldfont">
                     Enter Your Username or Email
-                </p boldfont>
+                </div>
                 <input type="text" class="textBar loginBar" id="username">
                 <!-- We Will Have To Make This Hidden (With Events) -->
-                <p boldfont>
+                <div class="p boldfont">
                     Enter Your Password
-                </p boldfont>
+                </div>
                 <!-- Type Password Makes It * -->
                 <input type="password" class="textBar loginBar" id="password">
                 <!-- Show/Hide Password Toggle -->
@@ -82,7 +82,37 @@
                 </button>
             </div>
             <div class="tab center" id="calendars" style="display: none;">
-                Calendar View
+                <!-- Toggles For Which Calendars To Show -->
+                <div id="calKey">
+                    <input type="checkbox" id="exToggle1">
+                    <label for="exToggle">Example Calendar 1</label>
+                    <input type="checkbox" id="exToggle2">
+                    <label for="exToggle">Example Calendar 2</label>
+                    <input type="checkbox" id="exToggle3">
+                    <label for="exToggle">Example Calendar 3</label>
+                </div>
+                <!-- Calendar Code -->
+                <div class="calendar">
+                    <div class="calHeader">
+                        <div id="currentMonth"></div>
+                        <button id="next">></button>
+                        <button id="back"><</button>
+                    </div>
+                    <div class="calBody">
+                        <div class="calWeekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="calDates">
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Professor Tabs -->

@@ -60,6 +60,10 @@
     align-items: center;
 }
 
+#calendars{
+    flex-direction: column-reverse;
+}
+
 /* Fonts */
 .p.boldFont{
     font-weight: bold;
@@ -99,4 +103,59 @@
 
 .textBar.searchBar{
     width: 75%;
+}
+
+/* Calendar */
+
+.calendar{
+    display: grid; 
+    width: 75%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: cornsilk;
+}
+
+.calHeader{
+    background-color: rgb(136, 16, 16);
+    height: 60px;
+    align-items: right;
+    gap: 10px;
+}
+
+.calHeader button:hover{
+    cursor: pointer;
+    color: rgb(195, 48, 48);
+}
+
+#currentMonth{
+    margin-right: 25px;
+}
+
+.calBody{
+    text-align: center;
+    padding: 10px;
+    color: gray;
+}
+
+.calDates:hover{
+    cursor: pointer;
+    color: rgb(211, 57, 57);
+}
+
+.calWeekdays, .calDates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: rgb(255, 200, 200);
+    color: black;
+}
+
+.currentDay{
+    color: rgb(211, 57, 57);
+}
+
+.currentDay:hover{
+    color: rgb(184, 39, 39);
 }
