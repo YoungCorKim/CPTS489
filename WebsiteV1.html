@@ -78,31 +78,16 @@
                     </div>
                     <!-- Login Error Text -->
                     <div id="loginErrorText" style="display: none;"></div>
-                    <button id="loginButton" onclick="loginCheck()">
-                        Login
-                    </button>
                 </div>
+                <button id="loginButton" onclick="loginCheck()">
+                        Login
+                </button>
             </div>
             <div class="tab center" id="calendars" style="display: none;">
-                <!-- Toggles For Which Calendars To Show -->
-                <div class="calKey">
-                    <div>
-                        <input type="checkbox" id="exToggle1">
-                        <label for="exToggle">Example Calendar 1</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="exToggle2">
-                        <label for="exToggle">Example Calendar 2</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="exToggle3">
-                        <label for="exToggle">Example Calendar 3</label>
-                    </div>
-                </div>
                 <!-- Calendar Code -->
                 <div class="calendar">
                     <div class="calHeader">
-                        <div id="currentMonth">Month Year</div>
+                        <div id="currentMonthYear">Month Year</div>
                         <button id="back"><</button>
                         <button id="next">></button>
                     </div>
@@ -119,6 +104,21 @@
                         <div class="calDates">
 
                         </div>
+                    </div>
+                </div>
+                <!-- Toggles For Which Calendars To Show -->
+                <div class="calKey">
+                    <div>
+                        <input type="checkbox" id="exToggle1">
+                        <label for="exToggle">Example Calendar 1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="exToggle2">
+                        <label for="exToggle">Example Calendar 2</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="exToggle3">
+                        <label for="exToggle">Example Calendar 3</label>
                     </div>
                 </div>
             </div>

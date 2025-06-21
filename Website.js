@@ -11,6 +11,14 @@ var groupTab = document.getElementById("groups");
 var findTab = document.getElementById("findUser");
 var settingTab = document.getElementById("settings");
 
+// Current Date
+let today = new Date;
+let thisMonth = today.getMonth();
+let thisYear = today.getFullYear();
+
+// Months
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
 // Login Confirmation
 function loginCheck(){
     var usernameText = document.getElementById("username").value;
@@ -46,6 +54,60 @@ function passwordToggle(){
         passwordText.type = "password";
     }
 }
+
+// Calendar Functions
+
+// Next and Back Buttons
+const backButton = document.getElementById("back");
+backButton.addEventListener("click", () =>{
+    thisMonth--;
+    if (thisMonth < 0){
+        thisMonth = 11;
+        thisYear--;
+    }
+    // Re-render the Calendar
+    renderCal(thisMonth, thisYear);
+});
+
+
+const nextButton = document.getElementById("next");
+nextButton.addEventListener("click", () =>{
+    thisMonth++;
+    if (thisMonth > 11){
+        thisMonth = 0;
+        thisYear++;
+    }
+    // Re-render the Calendar
+    renderCal();
+});
+
+// Calendar Rendering
+function renderCal(month, year){
+    // Clear Current Dates
+    var calDatesHTML = document.getElementById("calDates");
+    calDatesHTML.innerHTML = '';
+
+    // Set Header Text
+    document.getElementById("currentMonthYear").value = `${months[month]} ${year}`
+
+    // Get First Day & Next Month's First Day
+    var firstDay = new Date(year, month, 1).getDate();
+    var endDay = new Date(year, month + 1, 1).getDate();
+
+    // Create Buffer Dates Up to First Date
+    for (let i = 0; i < firstDay; i++){
+        var buffer = document.createElement("div");
+        calDatesHTML.appendChild(buffer);
+    }
+
+    // Add Days Within Boundary Dates
+    for (let j = 1; j < endDay; j++){
+        var newDay = document.createElement("div");
+        newDay.value = j;
+        calDatesHTML.appendChild(newDay);
+    }
+}
+
 
 // Function to Close All Tabs By Blocking Display
 function closeTabs(){
