@@ -66,23 +66,22 @@
                         Enter Your Username or Email
                     </div>
                     <input type="text" class="textBar loginBar" id="username">
-                </div>
-                <!-- We Will Have To Make This Hidden (With Events) -->
-                <div>
                     <div class="p boldFont">
                         Enter Your Password
                     </div>
                     <!-- Type Password Makes It * -->
                     <input type="password" class="textBar loginBar" id="password">
-                    <!-- Show/Hide Password Toggle -->
-                    <input type="checkbox" id="passwordToggle" onchange="passwordToggle()">
-                    <label for="passwordToggle">Show Password</label>
+                    <div>
+                        <!-- Show/Hide Password Toggle -->
+                        <input type="checkbox" id="passwordToggle" onchange="passwordToggle()">
+                        <label for="passwordToggle">Show Password</label>
+                    </div>
+                    <!-- Login Error Text -->
+                    <div id="loginErrorText" style="display: none;"></div>
+                    <button id="loginButton" onclick="loginCheck()">
+                        Login
+                    </button>
                 </div>
-                <!-- Login Error Text -->
-                <div id="loginErrorText" style="display: none;"></div>
-                <button id="loginButton" onclick="loginCheck()">
-                    Login
-                </button>
             </div>
             <div class="tab center" id="calendars" style="display: none;">
                 <!-- Toggles For Which Calendars To Show -->

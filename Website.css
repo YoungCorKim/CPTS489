@@ -60,8 +60,7 @@
 }
 
 #login div{
-    justify-content: right;
-    gap: 10px;
+    padding-bottom: 10px;
 }
 
 #calendars{
@@ -120,7 +119,7 @@
 }
 
 .calKey div{
-    gap: 10px;
+    padding-bottom: 15px;
     border: 2px;
     border-color: black;
     border-radius: 10px;
