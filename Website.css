@@ -59,6 +59,11 @@
     gap: 50px;
 }
 
+#login div{
+    justify-content: right;
+    gap: 10px;
+}
+
 #calendars{
     flex-direction: row-reverse;
     gap: 50px;
@@ -108,14 +113,14 @@
 
 /* Calendar & Key */
 
-#calKey{
+.calKey{
     display: flex;
     flex-direction: column;
-    padding: 10px;
     margin-top: 75px;
 }
 
-#calKey div{
+.calKey div{
+    gap: 10px;
     border: 2px;
     border-color: black;
     border-radius: 10px;
