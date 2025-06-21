@@ -1,6 +1,5 @@
 // Global Variables
 var homeTab = document.getElementById("home");
-var profileTab = document.getElementById("profile");
 var loginTab = document.getElementById("login");
 var calendarTab = document.getElementById("calendars");
 var createClassTab = document.getElementById("createClass");
@@ -115,7 +114,6 @@ function closeTabs(){
 
     // Set All Displays to None
     homeTab.style.display = "none";
-    profileTab.style.display = "none";
     loginTab.style.display = "none";
     calendarTab.style.display = "none";
     createClassTab.style.display = "none";
@@ -139,12 +137,6 @@ function loginOpen(){
     closeTabs();
     // Open Correct Tab
     loginTab.style.display = "flex";
-}
-function profileOpen(){
-    // Close Other Tabs First 
-    closeTabs();
-    // Open Correct Tab
-    profileTab.style.display = "flex";
 }
 function calendarsOpen(){
     // Close Other Tabs First 
