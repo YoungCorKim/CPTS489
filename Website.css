@@ -188,7 +188,11 @@
     min-height: 75px;
     border: 2px solid;
     border-left: none;
-    border-color: rgb(136, 16, 16);
+}
+
+.calDates div:first-child{
+    border-right: 2px solid;
+    border: none;
 }
 
 .calDates div:last-child{
