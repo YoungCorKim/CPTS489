@@ -57,7 +57,11 @@
 }
 .tab.center{
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+}
+
+#login{
+    gap: 50px;
 }
 
 #calendars{
@@ -68,6 +72,7 @@
 /* Fonts */
 .p.boldFont{
     font-weight: bold;
+    padding: 10px;
 }
 
 #loginErrorText{
@@ -97,7 +102,7 @@
 }
 
 .textBar.loginBar{
-    width: 40%;
+    width: 400px;
     height: 25px;
     font-size: 13px;
 }
@@ -111,6 +116,11 @@
 #calKey{
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    margin-top: 75px;
+    border: 2px;
+    border-color: black;
+    border-radius: 10px;
 }
 
 .calendar{
