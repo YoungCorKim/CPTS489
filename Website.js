@@ -92,7 +92,7 @@ function renderCal(month, year){
 
     // Get First Day & Next Month's First Day
     var firstDay = new Date(year, month, 1).getDate();
-    var endDay = new Date(year, month + 1, 1).getDate();
+    var endDay = new Date(year, month + 1, 0).getDate();
 
     console.log("Rendering?");
 
