@@ -62,7 +62,7 @@
 
 #calendars{
     flex-direction: row-reverse;
-    align-items: top;
+    gap: 50px;
 }
 
 /* Fonts */
@@ -106,10 +106,13 @@
     width: 75%;
 }
 
-/* Calendar */
+/* Calendar & Key */
+
+#calKey{
+    flex-direction: column;
+}
 
 .calendar{
-    display: grid; 
     width: 75%;
     height: auto;
     justify-content: center;
@@ -120,10 +123,12 @@
 }
 
 .calHeader{
+    display: flex;
     background-color: rgb(136, 16, 16);
-    height: 60px;
-    align-items: right;
-    gap: 10px;
+    height: 45px;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
     width: 100%;
 }
 
@@ -132,6 +137,7 @@
     color: cornsilk;
     font-size: 20px;
     font-weight: bolder;
+    border: 0px;
 }
 
 .calHeader button:hover{
@@ -145,10 +151,10 @@
 
 .calBody{
     text-align: center;
-    margin: 5px;
     color: gray;
     width: 100%;
     height: max-content;
+    gap: 5px;
 }
 
 .calDates:hover{
@@ -156,11 +162,18 @@
     color: rgb(211, 57, 57);
 }
 
+.calWeekdays{
+    color: rgb(70, 70, 70);
+}
+
+.calDates{
+    color: rgb(119, 119, 119);
+}
+
 .calWeekdays, .calDates{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     background-color: rgb(255, 200, 200);
-    color: black;
 }
 
 .currentDay{
