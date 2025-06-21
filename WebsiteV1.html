@@ -7,7 +7,6 @@
     </head>
 
     <body>
-
         <div id="mainLayout">
             <!-- This is the Side Navbar -->
             <div id="sidebar">
@@ -71,10 +70,13 @@
                 <p boldfont>
                     Enter Your Password
                 </p>
-                <input type="text" class="textBar loginBar" id="password">
-                <div id="loginErrorText" style="display: none;">
-                    blank text to take up space
-                </div>
+                <!-- Type Password Makes It * -->
+                <input type="password" class="textBar loginBar" id="password">
+                <!-- Show/Hide Password Toggle -->
+                <input type="checkbox" id="passwordToggle" onchange="passwordToggle()">
+                <label for="passwordToggle">Show Password</label>
+                <!-- Login Error Text -->
+                <div id="loginErrorText" style="display: none;"></div>
                 <button id="loginButton" onclick="loginCheck()">
                     Login
                 </button>

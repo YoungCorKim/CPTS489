@@ -34,6 +34,19 @@ function loginCheck(){
     }
 }
 
+// Show Password Function
+function passwordToggle(){
+    var toggle = document.getElementById("passwordtoggle");
+    var passwordText = document.getElementById("password");
+    // If Checked, Show Password
+    if(toggle.checked){
+        passwordText.type = "text";
+    }
+    else{
+        passwordText.type = "password";
+    }
+}
+
 // Function to Close All Tabs By Blocking Display
 function closeTabs(){
     // We Probably Should Make This an If Student, Close These / Else if Prof, Close These
