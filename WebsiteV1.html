@@ -73,7 +73,9 @@
                     Enter Your Password
                 </p>
                 <input type="text" class="textBar loginBar" id="password">
-                <div id="loginErrorText" style="display: none;"></div>
+                <div id="loginErrorText" style="display: none;">
+
+                </div>
                 <button id="loginButton" onclick="loginCheck()">
                     Login
                 </button>
@@ -249,13 +251,14 @@
         }
         // Alert User if Information is Incorrect With Text Under Login
         else{
+            // Get Error Text
             var errorText = document.getElementById("loginErrorText");
 
-            errorText.innerHTML = [
-                '<div id="loginErrorText" style="display: flex;">',
-                `${"Your Username or Password is Incorrect"}`,
-                '</div>'
-            ].join('')
+            // Change Error Text
+            errorText.innerHTML = [`${"Your Username or Password is Incorrect"}`]
+
+            // Make Text Visible
+            errorText.style.display = "flex";
         }
     }
 
