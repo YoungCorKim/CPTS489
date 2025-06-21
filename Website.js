@@ -36,7 +36,7 @@ function loginCheck(){
 
 // Show Password Function
 function passwordToggle(){
-    var toggle = document.getElementById("passwordtoggle");
+    var toggle = document.getElementById("passwordToggle");
     var passwordText = document.getElementById("password");
     // If Checked, Show Password
     if(toggle.checked){
