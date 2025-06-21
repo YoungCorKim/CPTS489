@@ -88,7 +88,8 @@ function renderCal(month, year){
     calDatesHTML.innerHTML = [];
 
     // Set Header Text
-    document.getElementById("currentMonthYear").value = `${months[month]} ${year}`
+    let displayMonthYear = document.getElementById("currentMonthYear");
+    displayMonthYear.value = `${months[month]} ${year}`
 
     // Get First Day & Next Month's First Day
     var firstDay = new Date(year, month, 1).getDate();
