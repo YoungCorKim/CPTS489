@@ -109,6 +109,7 @@
 /* Calendar & Key */
 
 #calKey{
+    display: flex;
     flex-direction: column;
 }
 
@@ -127,7 +128,7 @@
     background-color: rgb(136, 16, 16);
     height: 45px;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     gap: 5px;
     width: 100%;
 }

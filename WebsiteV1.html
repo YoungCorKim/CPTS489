@@ -62,19 +62,25 @@
             </div>
             <div class="tab center" id="login" style="display: none;">
                 Login Page
-                <div class="p boldfont">
-                    Enter Your Username or Email
+                <div style="justify-content: right;">
+                    <div class="p boldfont">
+                        Enter Your Username or Email
+                    </div>
+                    <input type="text" class="textBar loginBar" id="username">
                 </div>
-                <input type="text" class="textBar loginBar" id="username">
                 <!-- We Will Have To Make This Hidden (With Events) -->
-                <div class="p boldfont">
-                    Enter Your Password
+                <div style="justify-content: right;">
+                    <div class="p boldfont">
+                        Enter Your Password
+                    </div>
+                    <!-- Type Password Makes It * -->
+                    <input type="password" class="textBar loginBar" id="password">
                 </div>
-                <!-- Type Password Makes It * -->
-                <input type="password" class="textBar loginBar" id="password">
                 <!-- Show/Hide Password Toggle -->
-                <input type="checkbox" id="passwordToggle" onchange="passwordToggle()">
-                <label for="passwordToggle">Show Password</label>
+                <div>
+                    <input type="checkbox" id="passwordToggle" onchange="passwordToggle()">
+                    <label for="passwordToggle">Show Password</label>
+                </div>
                 <!-- Login Error Text -->
                 <div id="loginErrorText" style="display: none;"></div>
                 <button id="loginButton" onclick="loginCheck()">
@@ -84,12 +90,18 @@
             <div class="tab center" id="calendars" style="display: none;">
                 <!-- Toggles For Which Calendars To Show -->
                 <div id="calKey">
-                    <input type="checkbox" id="exToggle1">
-                    <label for="exToggle">Example Calendar 1</label>
-                    <input type="checkbox" id="exToggle2">
-                    <label for="exToggle">Example Calendar 2</label>
-                    <input type="checkbox" id="exToggle3">
-                    <label for="exToggle">Example Calendar 3</label>
+                    <div>
+                        <input type="checkbox" id="exToggle1">
+                        <label for="exToggle">Example Calendar 1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="exToggle2">
+                        <label for="exToggle">Example Calendar 2</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="exToggle3">
+                        <label for="exToggle">Example Calendar 3</label>
+                    </div>
                 </div>
                 <!-- Calendar Code -->
                 <div class="calendar">
