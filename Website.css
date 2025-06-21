@@ -82,6 +82,10 @@
     text-align: left;
 }
 
+#userSearchText{
+    justify-self: center;
+}
+
 /* Buttons */
 #loginButton{
     width: 150px;
@@ -108,11 +112,10 @@
 }
 
 .textBar.searchBar{
-    width: 75%;
+    width: 60vw;
 }
 
 /* Calendar & Key */
-
 .calKey{
     display: flex;
     flex-direction: column;
