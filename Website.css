@@ -135,7 +135,7 @@
 
 .calKey div{
     padding-bottom: 15px;
-    border: 2px;
+    border: 2px solid;
     border-color: black;
     border-radius: 10px;
 }
@@ -213,14 +213,9 @@
 }
 
 /* Create Class */
-
-/* Date Selection */
-
-#classDates{
-    display: flex;
-    flex-direction: column;
+#createClass div{
+    min-height: 30px;
 }
-
 
 /* Settings */ 
 .settingsTitle {
