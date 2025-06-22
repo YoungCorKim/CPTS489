@@ -112,15 +112,12 @@ function renderCal(month, year){
 // Creating Event Functions
 
 // Reoccuring Event Toggle Function
-function reoccuringEventToggle(){
-    var reToggle = document.getElementById("reoccuringToggle");
+function reoccuringEventToggle(yn){
     var dateDropdown = document.getElementById("eventDates");
     var eventDateText = document.getElementById("eventDateText");
 
-    console.log(reToggle.value);
-
-    // If the Toggle Is Set to Default, Hide Date Dropdown
-    if(reToggle.value == "default"){
+    // If the Toggle Is Set to No, Hide Date Dropdown
+    if(yn == no){
         dateDropdown.innerHTML = [];
         eventDateText.innerHTML = ['Date of Event'];
     }
