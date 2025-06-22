@@ -5,6 +5,7 @@ var calendarTab = document.getElementById("calendars");
 var createClassTab = document.getElementById("createClass");
 var manageClassTab = document.getElementById("manageClass");
 var createEventTab = document.getElementById("createEvent");
+var manageEventTab = document.getElementById("manageEvent");
 var importTab = document.getElementById("importSched");
 var groupTab = document.getElementById("groups");
 var findTab = document.getElementById("findUser");
@@ -119,6 +120,7 @@ function closeTabs(){
     createClassTab.style.display = "none";
     manageClassTab.style.display = "none";
     createEventTab.style.display = "none";
+    manageEventTab.style.display= "none";
     importTab.style.display = "none";
     groupTab.style.display = "none";
     findTab.style.display = "none";
@@ -163,6 +165,12 @@ function createEventOpen(){
     closeTabs();
     // Open Correct Tab
     createEventTab.style.display = "flex";
+}
+function manageEventOpen(){
+    // Close Other Tabs First 
+    closeTabs();
+    // Open Correct Tab
+    manageEventTab.style.display = "flex";
 }
 function importSchedOpen(){
     // Close Other Tabs First 

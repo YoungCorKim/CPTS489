@@ -33,6 +33,9 @@
                 <button class="sideButton" onclick="createEventOpen()">
                     Create Event
                 </button>
+                <button class="sideButton" onclick="manageEventOpen()">
+                    Manage Events
+                </button>
                 <button class="sideButton" onclick="importSchedOpen()">
                     Import Schedule
                 </button>
@@ -52,7 +55,12 @@
             <!-- Main Tabs -->
             <div class="tab" id="home">
                 <!-- Probably Want a List of Events For Today & Times As Well as Notification Bank -->
-                Main Text :D
+                 <div id="eventsToday">
+
+                 </div>
+                 <div id="homeNotifications">
+
+                 </div>
             </div>
             <div class="tab" id="login" style="display: none;">
                 <div>
@@ -213,11 +221,16 @@
             </div>
             <div class="tab" id="manageClass" style="display: none;">
                 Manage Classes
+                <!-- checklist and delete/edit, prompt are you sure for delete edit swaps to create-like page with info filled & save/cancel-->
             </div>
 
             <!-- Student Tabs -->
             <div class="tab" id="createEvent" style="display: none;">
                 Create Event
+                <!-- Event name, time, reoccuring? Optional date dropdown -->
+            </div>
+            <div class="tab" id="manageEvent" style="display: none;">
+                <!-- Like mangae classes -->
             </div>
             <div class="tab" id="importSched" style="display: none;">
                 <h2 class="importTitle">Import Schedule</h2>

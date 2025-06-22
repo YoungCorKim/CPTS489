@@ -132,6 +132,11 @@
     margin-left: 10px;
 }
 
+.dateSelect :last-child{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 /* Calendar & Key */
 .calKey, .dateSelect{
     display: flex;
