@@ -54,6 +54,7 @@
 }
 
 #home{
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -116,7 +117,7 @@
     color: rgb(211, 57, 57);
 }
 
-.eventText:first{
+.eventText:first-of-type{
     border-top: 2px solid rgb(70, 70, 70);
 }
 
@@ -134,7 +135,7 @@
     color: rgb(119, 119, 119);
 }
 
-.notificationText:first{
+.notificationText:first-of-type{
     border-top: 2px solid rgb(136, 16, 16);
 }
 
@@ -150,12 +151,18 @@
 }
 
 .notificationDismiss{
-    margin-right: 30px;
+    margin-left: 45px;
+    margin-bottom: 10px;
     padding: 5px 10px 5px;
     color: cornsilk;
     background-color: rgb(132, 0, 0);
     border-radius: 10px;
     border-color: transparent;
+}
+
+.notificationDismiss :hover{
+    cursor: pointer;
+    background-color: rgb(195, 48, 48);
 }
 
 /* Text Bars */
@@ -186,6 +193,7 @@
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
+    padding: 10px;
 }
 
 #eventsToday div{
@@ -200,6 +208,7 @@
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
+    padding: 10px;
 }
 
 #homeNotifications div{
