@@ -116,12 +116,10 @@ function reoccuringEventToggle(yn){
     var dateDropdown = document.getElementById("eventDates");
     var eventDateText = document.getElementById("eventDateText");
 
+    console.log(yn);
+
     // If the Toggle Is Set to No, Hide Date Dropdown
-    if(yn == "no"){
-        dateDropdown.innerHTML = [];
-        eventDateText.innerHTML = ['Date of Event'];
-    }
-    else{
+    if(yn == 'yes'){
         dateDropdown.innerHTML= [
         '<div class="p boldFont">',
             'Days This Event Will Be Held On',
@@ -152,6 +150,10 @@ function reoccuringEventToggle(yn){
 
         // Also Update Event Date Text
         eventDateText.innerHTML = ['Start Date of Event'];
+    }
+    else{
+        dateDropdown.innerHTML = [];
+        eventDateText.innerHTML = ['Date of Event'];
     }
 }
 
