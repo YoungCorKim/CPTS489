@@ -98,13 +98,14 @@
 }
 
 /* Buttons */
-#loginButton{
+#loginButton, #createClassButton{
     width: 150px;
     margin-top: 50px;
     padding: 5px 10px 5px;
     color: cornsilk;
     background-color: rgb(132, 0, 0);
     border-radius: 10px;
+    border-color: transparent;
 }
 
 /* Text Bars */
@@ -135,9 +136,6 @@
 
 .calKey div{
     padding-bottom: 15px;
-    border: 2px solid;
-    border-color: black;
-    border-radius: 10px;
 }
 
 .calendar{
