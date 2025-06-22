@@ -128,7 +128,20 @@
                 Create Event
             </div>
             <div class="tab" id="importSched" style="display: none;">
-                Import a Calendar
+                <h2 class="importTitle">Import Schedule</h2>
+                <div class="formContainer">
+                <div class="formGroup">
+                    <label for="csvUpload">Upload CSV File</label>
+                    <input type="file" id="csvUpload" accept=".csv" class="textBar">
+                </div>
+
+                <button class="sideButton" id="uploadButton">Upload</button>
+                <p id="uploadStatus"></p>
+
+                <p style="font-size: 11px; color: gray">
+                    Format: <code>Title,StartDate,EndDate,Location</code>
+                </p>
+                </div>
             </div>
             <div class="tab" id="groups" style="display: none;">
                 View Groups
@@ -144,10 +157,59 @@
                     <!-- Will Probably Want a Table For Results Here -->
                 </div>
             </div>
+
+            <!-- Settings -->
             <div class="tab" id="settings" style="display: none;">
-                Settings!!
-                <!-- Will Want Ability to Reset Password, Change Email, Change Username, Update Name/Gender, Update School, Update Image -->
+                <h2 class="settingsTitle">Profile Settings</h2>
+              
+                <div class="formContainer">
+                  <div class="formGroup">
+                    <label for="settingsName">Name</label>
+                    <input type="text" id="settingsName" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsUsername">Username</label>
+                    <input type="text" id="settingsUsername" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsEmail">Email</label>
+                    <input type="email" id="settingsEmail" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsGender">Gender</label>
+                    <select id="settingsGender" class="textBar">
+                      <option value="">Select</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsSchool">School</label>
+                    <input type="text" id="settingsSchool" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsPwd">New Password</label>
+                    <input type="password" id="settingsPwd" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsImage">Profile Image</label>
+                    <input type="file" id="settingsImage" accept="image/*" class="textBar">
+                  </div>
+              
+                  <button class="sideButton" id="saveSettings">Save Settings</button>
+                  <p id="settingsStatus"></p>
+                </div>
             </div>
+              
+              
+              
         </div>
 
         <!-- Link to JavaScript Code -->
