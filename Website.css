@@ -97,10 +97,46 @@
     justify-self: center;
 }
 
+#eventTitle{
+    font-size: 20px;
+    font-weight: bold;
+    justify-self: center;
+    color: rgb(211, 57, 57);
+    border-bottom: 5px solid rgb(136, 16, 16);
+}
+
+.eventText{
+    justify-self: center;
+    color: rgb(211, 57, 57);
+}
+
+#notificationTitle{
+    font-size: 20px;
+    font-weight: bold;
+    justify-self: center;
+    color: rgb(119, 119, 119);
+    border-bottom: 3px solid rgb(70, 70, 70);
+}
+
+.notificationText{
+    justify-self: center;
+    color: rgb(119, 119, 119);
+}
+
 /* Buttons */
 #loginButton, #createClassButton{
     width: 150px;
     margin-top: 50px;
+    padding: 5px 10px 5px;
+    color: cornsilk;
+    background-color: rgb(132, 0, 0);
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+.notificationDismiss{
+    width: 35px;
+    margin-right: 30px;
     padding: 5px 10px 5px;
     color: cornsilk;
     background-color: rgb(132, 0, 0);
@@ -125,6 +161,37 @@
 
 .textBar.searchBar{
     width: 60vw;
+}
+
+/* Main Page */
+#eventsToday{
+    width: 35%;
+    height: 80%;
+    border: 5px solid rgb(136, 16, 16);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+#eventsToday div{
+    border-bottom: 5px solid rgb(136, 16, 16);
+    border-top: 5px solid rgb(136, 16, 16);
+}
+
+#homeNotifications{
+    width: 35%;
+    height: 80%;
+    border: 3px solid rgb(70, 70, 70);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+#homeNotifications div{
+    border-bottom: 3px solid rgb(70, 70, 70);
+    border-top: 3px solid rgb(70, 70, 70);
 }
 
 /* Date Selection Format */
