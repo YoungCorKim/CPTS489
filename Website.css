@@ -115,9 +115,11 @@
 .eventText{
     justify-self: center;
     color: rgb(211, 57, 57);
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.eventText:first-of-type{
+.eventText div:first-of-type{
     border-top: 2px solid rgb(70, 70, 70);
 }
 
@@ -135,7 +137,7 @@
     color: rgb(119, 119, 119);
 }
 
-.notificationText:first-of-type{
+.notificationText div:first-of-type{
     border-top: 2px solid rgb(136, 16, 16);
 }
 
@@ -150,9 +152,9 @@
     border-color: transparent;
 }
 
-.notificationDismiss{
-    margin-left: 45px;
-    margin-bottom: 10px;
+.notificationDismiss button{
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding: 5px 10px 5px;
     color: cornsilk;
     background-color: rgb(132, 0, 0);
@@ -160,7 +162,7 @@
     border-color: transparent;
 }
 
-.notificationDismiss :hover{
+.notificationDismiss button:hover{
     cursor: pointer;
     background-color: rgb(195, 48, 48);
 }
