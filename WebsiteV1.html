@@ -267,13 +267,15 @@
                     <div class="p boldFont">
                         Is This Event Reoccuring?
                     </div>
-                    <div id="reoccuringToggle" onchange="reoccuringEventToggle()">
-                        <input type="radio" id="reNo" value="default" name="reRadio">
-                        <input type="radio" id="reYes" value="reoccuring" name="reRadio">
+                    <div id="reoccuringToggle">
+                        <input type="radio" id="reNo" value="default" name="reRadio" onclick="reoccuringEventToggle()">
+                        <label for="reNo">No</label>
+                        <input type="radio" id="reYes" value="reoccuring" name="reRadio" onclick="reoccuringEventToggle()">
+                        <label for="reYes">Yes</label>
                     </div>
                     
                     <!-- Dropdown for Days -->
-                    <div id="eventDates" class="dateSelect"></div>
+                    <div id="eventDates"></div>
                     <button class="createButton">
                         Create Event
                     </button>
