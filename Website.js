@@ -112,14 +112,12 @@ function renderCal(month, year){
 // Creating Event Functions
 
 // Reoccuring Event Toggle Function
-function reoccuringEventToggle(yn){
+function reoccuringEventToggle(status){
     var dateDropdown = document.getElementById("eventDates");
     var eventDateText = document.getElementById("eventDateText");
 
-    console.log(yn);
-
     // If the Toggle Is Set to No, Hide Date Dropdown
-    if(yn == "on"){
+    if(status == "on"){
         dateDropdown.innerHTML= [
         '<div class="p boldFont">',
             'Days This Event Will Be Held On',

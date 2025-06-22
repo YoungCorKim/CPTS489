@@ -160,7 +160,7 @@
     border-color: transparent;
 }
 
-.notificationDismiss:hover, #loginButton:hover, .createButton:hover{
+.notificationDismiss:hover, #loginButton:hover, .createButton:hover, #searchUserButton:hover{
     cursor: pointer;
     background-color: rgb(195, 48, 48);
     color: rgb(228, 216, 171);
