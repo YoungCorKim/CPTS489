@@ -241,9 +241,6 @@
 
             <!-- Student Tabs -->
             <div class="tab" id="createEvent" style="display: none;">
-                Create Event
-                <!-- Event name, time, reoccuring? Optional date dropdown -->
-
                 <div>
                     <div class="p boldFont">
                         Event Title
@@ -271,8 +268,8 @@
                         Is This Event Reoccuring?
                     </div>
                     <div id="reoccuringToggle" onchange="reoccuringEventToggle()">
-                        <input type="radio" id="reNo" value="default">
-                        <input type="radio" id="reYes" value="reoccuring">
+                        <input type="radio" id="reNo" value="default" name="reRadio">
+                        <input type="radio" id="reYes" value="reoccuring" name="reRadio">
                     </div>
                     
                     <!-- Dropdown for Days -->
@@ -280,6 +277,7 @@
                     <button class="createButton">
                         Create Event
                     </button>
+                </div>
             </div>
             <div class="tab" id="manageEvent" style="display: none;">
                 <!-- Like manage classes -->
