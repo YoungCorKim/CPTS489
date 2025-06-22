@@ -228,7 +228,7 @@
                     <input type="time" id="classTimeEnd">
 
                     <div>
-                    <button id="createClassButton">
+                    <button class="createButton">
                         Create Class
                     </button>
                     </div>
@@ -243,9 +243,46 @@
             <div class="tab" id="createEvent" style="display: none;">
                 Create Event
                 <!-- Event name, time, reoccuring? Optional date dropdown -->
+
+                <div>
+                    <div class="p boldFont">
+                        Event Title
+                    </div>
+                    <input type="text" id="eventName">
+
+                    <!-- Date -->
+                    <div class="p boldFont">
+                        Date of Event
+                    </div>
+                    <input type="date" id="eventDate">
+
+                    <!-- Time Slot -->
+                    <div class="p boldFont">
+                        Secheduled Start Time 
+                    </div>
+                    <input type="time" id="eventStartTime">
+                    <div class="p boldFont">
+                        Scheduled End Time
+                    </div>
+                    <input type="time" id="eventEndTime">
+
+                    <!-- Toggle for If Event is Reoccuring -->
+                    <div class="p boldFont">
+                        Is This Event Reoccuring?
+                    </div>
+                    <div id="reoccuringToggle" onchange="reoccuringEventToggle()">
+                        <input type="radio" id="reNo" value="default">
+                        <input type="radio" id="reYes" value="reoccuring">
+                    </div>
+                    
+                    <!-- Dropdown for Days -->
+                    <div id="eventDates" class="dateSelect"></div>
+                    <button class="createButton">
+                        Create Event
+                    </button>
             </div>
             <div class="tab" id="manageEvent" style="display: none;">
-                <!-- Like mangae classes -->
+                <!-- Like manage classes -->
             </div>
             <div class="tab" id="importSched" style="display: none;">
                 <h2 class="importTitle">Import Schedule</h2>
@@ -274,8 +311,9 @@
                         Search For a User Below
                     </div>
                     <input type="text" class="textBar searchBar" id="userSearchBar" placeholder="Enter a Username">
-                    <!-- Will Probably Want a Table For Results Here -->
+                    <button id="searchUserButton">Search</button>
                 </div>
+                <!-- Will Probably Want a Table For Results Here -->
             </div>
 
             <!-- Settings -->

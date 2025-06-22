@@ -109,6 +109,46 @@ function renderCal(month, year){
     }
 }
 
+// Creating Event Functions
+
+// Reoccuring Event Toggle Function
+function reoccuringEventToggle(){
+    var reToggle = document.getElementById("reoccuringToggle");
+    var dateDropdown = document.getElementById("eventDates");
+
+    // If the Toggle Is Set to Default, Hide Date Dropdown
+    if(reToggle.value == "default"){
+        dateDropdown.innerHTML = [];
+    }
+    else{
+        dateDropdown.innerHTML= [
+        '<div class="p boldFont">',
+            '${Days This Event Will Be Held On}',
+        '</div>',
+        '<div>',
+            '<input type="checkbox" id="eventMon">',
+            '<label for="eventMon">Monday</label>',
+        '</div>',
+        '<div>',
+            '<input type="checkbox" id="eventTue">',
+            '<label for="eventTue">Tuesday</label>',
+        '</div>',
+        '<div>',
+            '<input type="checkbox" id="eventWed">',
+            '<label for="eventWed">Wednesday</label>',
+        '</div>',
+        '<div>',
+            '<input type="checkbox" id="eventThu">',
+            '<label for="eventThu">Thursday</label>',
+        '</div>',
+        '<div>',
+            '<input type="checkbox" id="eventFri">',
+            '<label for="eventFri">Friday</label>',
+        '</div>'
+            ].join('');
+    }
+}
+
 // Function to Close All Tabs By Blocking Display
 function closeTabs(){
     // We Probably Should Make This an If Student, Close These / Else if Prof, Close These
