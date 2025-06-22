@@ -119,7 +119,7 @@ function reoccuringEventToggle(yn){
     console.log(yn);
 
     // If the Toggle Is Set to No, Hide Date Dropdown
-    if(String(yn) === "yes"){
+    if(yn == "on"){
         dateDropdown.innerHTML= [
         '<div class="p boldFont">',
             'Days This Event Will Be Held On',
