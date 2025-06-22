@@ -127,14 +127,54 @@
                     <!-- Dropdown for Department -->
                     <select name="Subject" id="subject">
                         <option value="default">Select Class Subject</option>
-                        <option value="accounting">Accounting</option>
-                        <option value="art">Art</option>
-                        <option value="business">Business</option>
+                        <option value="ACC">Accounting</option>
+                        <option value="AERO">Aerospace Engineering</option>
+                        <option value="ART">Art</option>
+                        <option value="BUS">Business</option>
+                        <option value="CHEM">Chemistry</option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="CSEC">Cybersecurity</option>
+                        <option value="ECON">Economics</option>
+                        <option value="PSY">Psychology</option>
+                        <option value="ELC">Electrical Engineering</option>
+                        <option value="ENG">English</option>
+                        <option value="HLTH">Healthcare</option>
+                        <option value="MTH">Mathematics</option>
+                        <option value="MECH">Mechanical Engineering</option>
+                        <option value="PHIL">Philosophy</option>
+                        <option value="PHYS">Physics</option>
+                        <option value="SOC">Sociology</option>
+                        <option value="SE">Software Engineering</option>
+                        <option value="OTH">Other</option>
                     </select>
-                    <!-- Click different days scheduled -->
+                    <label for="classSubject">Class Subject</label>
+                    
+                    <!-- Dropdown for Days -->
+                    <div id="classDates">
+                        <label for="classDates">Days This Class Will Be Held On</label>
+
+                        <input type="checkbox" id="classMon">
+                        <label for="classMon">Monday</label>
+                        <input type="checkbox" id="classTue">
+                        <label for="classTue">Tuesday</label>
+                        <input type="checkbox" id="classWed">
+                        <label for="classWed">Wednesday</label>
+                        <input type="checkbox" id="classThu">
+                        <label for="classThu">Thursday</label>
+                        <input type="checkbox" id="classFri">
+                        <label for="classFri">Friday</label>
+                    </div>
                     <!-- Start Date -->
+                    <input type="date" id="classStart">
+                    <label for="classStart">Start Date</label>
+                    
                     <!-- End Date -->
+                    <input type="date" id="classEnd">
+                    <label for="classStart">End Date</label>
+
                     <!-- Time Slot -->
+                    <input type="datetime" id="classTime">
+                    <label for="classTime">Scheduled Time</label>
 
                 </div>
             </div>
