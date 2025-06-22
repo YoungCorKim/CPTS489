@@ -118,12 +118,19 @@
             <!-- Professor Tabs -->
             <div class="tab" id="createClass" style="display: none;">
                 <div>
+                    <div class="p boldfont">
+                        Class Name
+                    </div>
                     <input type="text" id="className">
-                    <label for="className">Class Name</label>
 
+                    <div class="p boldfont">
+                        Class Number
+                    </div>
                     <input type="text" id="classNumber">
-                    <label for="classNumber">Class Number</label>
 
+                    <div class="p boldfont">
+                        Class Subject
+                    </div>
                     <!-- Dropdown for Department -->
                     <select name="Subject" id="subject">
                         <option value="default">Select Class Subject</option>
@@ -147,11 +154,12 @@
                         <option value="SE">Software Engineering</option>
                         <option value="OTH">Other</option>
                     </select>
-                    <label for="classSubject">Class Subject</label>
                     
                     <!-- Dropdown for Days -->
                     <div id="classDates">
-                        <label for="classDates">Days This Class Will Be Held On</label>
+                        <div class="p boldfont">
+                            Days This Class Will Be Held On 
+                        </div>
 
                         <input type="checkbox" id="classMon">
                         <label for="classMon">Monday</label>
@@ -164,17 +172,28 @@
                         <input type="checkbox" id="classFri">
                         <label for="classFri">Friday</label>
                     </div>
+
                     <!-- Start Date -->
+                    <div class="p boldfont">
+                        Start Date
+                    </div>
                     <input type="date" id="classStart">
-                    <label for="classStart">Start Date</label>
                     
                     <!-- End Date -->
+                    <div class="p boldfont">
+                        End Date
+                    </div>
                     <input type="date" id="classEnd">
-                    <label for="classStart">End Date</label>
 
                     <!-- Time Slot -->
-                    <input type="datetime" id="classTime">
-                    <label for="classTime">Scheduled Time</label>
+                    <div class="p boldfont">
+                        Secheduled Start Time 
+                    </div>
+                    <input type="time" id="classTimeStart">
+                    <div class="p boldfont">
+                        Scheduled End Time
+                    </div>
+                    <input type="time" id="classTimeEnd">
 
                 </div>
             </div>
