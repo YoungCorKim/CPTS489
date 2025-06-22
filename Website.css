@@ -133,6 +133,8 @@
 }
 
 .notificationText{
+    display: flex;
+    justify-content: space-around;
     justify-self: center;
     color: rgb(119, 119, 119);
 }
@@ -152,7 +154,7 @@
     border-color: transparent;
 }
 
-.notificationDismiss button{
+.notificationDismiss {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px 10px 5px;
@@ -162,7 +164,7 @@
     border-color: transparent;
 }
 
-.notificationDismiss button:hover{
+.notificationDismiss :hover{
     cursor: pointer;
     background-color: rgb(195, 48, 48);
 }
