@@ -53,6 +53,11 @@
     width: 100%;
 }
 
+#home{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 #createClass{
     flex-direction: column;
     align-items: left;
@@ -171,12 +176,12 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: top;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #eventsToday div{
     border-bottom: 5px solid rgb(136, 16, 16);
-    border-top: 5px solid rgb(136, 16, 16);
 }
 
 #homeNotifications{
@@ -186,12 +191,12 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: top;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #homeNotifications div{
     border-bottom: 3px solid rgb(70, 70, 70);
-    border-top: 3px solid rgb(70, 70, 70);
 }
 
 /* Date Selection Format */
