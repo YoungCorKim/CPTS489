@@ -1,0 +1,230 @@
+.p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 13px;
+}
+
+/* Main Layout */
+#mainLayout{
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    gap: 35px;
+}
+
+/* Nav Bar */
+#sidebar{
+    display: grid;
+    width: 150px;
+    height: 100vh;
+    white-space: nowrap;
+    justify-content: left;
+    align-items: top;
+    background-color: red;
+    grid-auto-rows: min-content;
+}
+
+#navSpace{
+    background-color: red;
+    width: 150px;
+    height: 75px;
+}
+
+.sideButton{
+    background-color: red;
+    cursor: pointer;
+    font-size: 13px;
+    color: cornsilk;
+    border: 0px;
+    width: 150px;
+    padding: 8px;
+}
+
+.sideButton:hover{
+    background-color: rgb(255, 97, 97);
+}
+
+/* Tabs */
+.tab{
+    font-style: normal;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 75px;
+    width: 100%;
+}
+
+#login, #findUser{
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+#login div, #findUser div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#calendars{
+    flex-direction: row;
+    gap: 50px;
+}
+
+/* Fonts */
+.p.boldFont{
+    font-weight: bold;
+}
+
+#loginErrorText{
+    margin: 2px 0px 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: red;
+    text-align: left;
+}
+
+#userSearchText{
+    justify-self: center;
+}
+
+/* Buttons */
+#loginButton{
+    width: 150px;
+    margin-top: 50px;
+    padding: 5px 10px 5px;
+    color: cornsilk;
+    background-color: rgb(132, 0, 0);
+    border-radius: 10px;
+}
+
+/* Text Bars */
+.textBar{
+    border-radius: 10px;
+    border-color: black;
+    border-width: 3px;
+    height: 25px;
+    font-size: 13px;
+}
+
+.textBar.loginBar{
+    width: 400px;
+    height: 25px;
+    font-size: 13px;
+}
+
+.textBar.searchBar{
+    width: 60vw;
+}
+
+/* Calendar & Key */
+.calKey{
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+.calKey div{
+    padding-bottom: 15px;
+    border: 2px;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.calendar{
+    width: 75%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: cornsilk;
+}
+
+.calHeader{
+    display: flex;
+    background-color: rgb(136, 16, 16);
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.calHeader button{
+    background-color: transparent;
+    color: cornsilk;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 0px;
+}
+
+.calHeader button:hover{
+    cursor: pointer;
+    color: rgb(195, 48, 48);
+}
+
+#currentMonth{
+    margin-right: 25px;
+}
+
+.calBody{
+    text-align: center;
+    color: gray;
+    width: 100%;
+    height: max-content;
+    gap: 5px;
+}
+
+.calDates div:hover{
+    cursor: pointer;
+    color: rgb(211, 57, 57);
+}
+
+.calWeekdays{
+    color: rgb(70, 70, 70);
+}
+
+.calDates{
+    color: rgb(119, 119, 119);
+}
+
+.calDates div{
+    min-height: 75px;
+    border: 2px solid;
+    margin-right: -2px;
+    margin-top: -2px;
+    border-color: rgb(119, 119, 119);
+}
+
+.calWeekdays, .calDates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: rgb(255, 200, 200);
+}
+
+.settingsTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    padding-left: 5px;
+}
+  
+#settings .formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    width: 400px;
+    align-items: flex-start;
+    padding-left: 5px;
+}
+
+.importTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    padding-left: 5px;
+}
+  
+  
