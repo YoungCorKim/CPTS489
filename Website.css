@@ -127,8 +127,13 @@
     width: 60vw;
 }
 
+/* Date Selection Format */
+.dateSelect div{
+    margin-left: 10px;
+}
+
 /* Calendar & Key */
-.calKey{
+.calKey, .dateSelect{
     display: flex;
     flex-direction: column;
     margin-top: 75px;
@@ -208,11 +213,6 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     background-color: rgb(255, 200, 200);
-}
-
-/* Create Class */
-#createClass div{
-    min-height: 30px;
 }
 
 /* Settings */ 
