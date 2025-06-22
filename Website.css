@@ -119,8 +119,7 @@
     align-items: center;
     color: rgb(211, 57, 57);
     margin-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    padding-bottom: 13px;
 }
 
 #notificationTitle{
@@ -138,7 +137,6 @@
     justify-self: center;
     align-items: center;
     color: rgb(119, 119, 119);
-    padding-left: 10px;
 }
 
 /* Buttons */
@@ -195,7 +193,6 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-content: space-evenly;
     padding: 10px;
 }
 
@@ -210,7 +207,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-content: space-evenly;
+    padding: 10px;
 }
 
 #homeNotifications div{
