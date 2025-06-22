@@ -117,7 +117,7 @@ function reoccuringEventToggle(yn){
     var eventDateText = document.getElementById("eventDateText");
 
     // If the Toggle Is Set to No, Hide Date Dropdown
-    if(yn == no){
+    if(yn == "no"){
         dateDropdown.innerHTML = [];
         eventDateText.innerHTML = ['Date of Event'];
     }
