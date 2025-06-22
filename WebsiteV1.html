@@ -235,8 +235,21 @@
                 </div>
             </div>
             <div class="tab" id="manageClass" style="display: none;">
-                Manage Classes
+                
                 <!-- checklist and delete/edit, prompt are you sure for delete edit swaps to create-like page with info filled & save/cancel-->
+                <h2>Your Classes</h2>
+
+               <div id="classListContainer">
+                    <div class="item">
+                        <span class="class-name">CPTS489</span>
+                        <div class="buttons">
+                            <button onclick="editClass(1)">Edit</button>
+                            <button onclick="confirmDeleteClass(1)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+  
             </div>
 
             <!-- Student Tabs -->
@@ -282,7 +295,18 @@
                 </div>
             </div>
             <div class="tab" id="manageEvent" style="display: none;">
-                <!-- Like manage classes -->
+                <!-- Like manage events -->
+                <h2>Your Events</h2>
+
+               <div id="eventListContainer">
+                    <div class="item">
+                        <span class="event-name">Test</span>
+                        <div class="buttons">
+                            <button onclick="editEvent(1)">Edit</button>
+                            <button onclick="confirmDeleteEvent(1)">Delete</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tab" id="importSched" style="display: none;">
                 <h2 class="importTitle">Import Schedule</h2>
@@ -301,7 +325,17 @@
                 </div>
             </div>
             <div class="tab" id="groups" style="display: none;">
-                View Groups
+                <h2>Your Groups</h2>
+
+               <div id="groupListContainer">
+                    <div class="item">
+                        <span class="group-name">Test</span>
+                        <div class="buttons">
+                            <button onclick="editGroup(1)">Edit</button>
+                            <button onclick="confirmDeleteGroup(1)">Delete</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Utilities -->
