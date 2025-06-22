@@ -116,7 +116,8 @@
     justify-self: center;
     color: rgb(211, 57, 57);
     margin-top: 5px;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
 }
 
 .eventText:first-of-type{
@@ -136,7 +137,9 @@
     display: flex;
     justify-content: space-around;
     justify-self: center;
+    align-items: center;
     color: rgb(119, 119, 119);
+    padding-left: 10px;
 }
 
 .notificationText:first-of-type{
@@ -167,6 +170,7 @@
 .notificationDismiss:hover{
     cursor: pointer;
     background-color: rgb(195, 48, 48);
+    color: rgb(228, 216, 171);
 }
 
 /* Text Bars */
@@ -197,7 +201,6 @@
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
-    padding: 10px;
 }
 
 #eventsToday div{
@@ -212,7 +215,6 @@
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
-    padding: 10px;
 }
 
 #homeNotifications div{
