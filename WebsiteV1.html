@@ -100,6 +100,9 @@
                 </div>
                 <!-- Toggles For Which Calendars To Show -->
                 <div class="calKey">
+                    <div class="p boldfont">
+                        ~ View Your Calendars ~
+                    </div>
                     <div>
                         <input type="checkbox" id="exToggle1">
                         <label for="exToggle">Example Calendar 1</label>
@@ -117,7 +120,28 @@
 
             <!-- Professor Tabs -->
             <div class="tab" id="createClass" style="display: none;">
-                Create Class Prof
+                <div>
+                    <input type="text" id="className">
+                    <label for="className">Class Name</label>
+
+                    <input type="text" id="classNumber">
+                    <label for="classNumber">Class Number</label>
+
+                    <!-- Dropdown for Department -->
+                    <select name="Subject" id="subject">
+                        <option value="default">Select Class Subject</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="art">Art</option>
+                        <option value="business">Business</option>
+                    </select>
+                    <!-- Click different days scheduled -->
+                    <!-- Start Date -->
+                    <!-- End Date -->
+                    <!-- Time Slot -->
+
+                </div>
+                <div></div>
+                <div></div>
             </div>
             <div class="tab" id="manageClass" style="display: none;">
                 Manage Classes
