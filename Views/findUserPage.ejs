@@ -60,13 +60,29 @@
                     <div id="userSearchText" class="p boldFont">
                         Search For a User Below
                     </div>
-                    <input type="text" class="textBar searchBar" id="userSearchBar" placeholder="Enter a Username">
-                    <button id="searchUserButton">Search</button>
+                    <form id="searchUsers" method="POST" action="/find">
+                        <input type="text" class="textBar searchBar" id="userSearchBar" placeholder="Enter a Username">
+                        <button id="searchUserButton" type="submit">Search</button>
+                    </form>
                 </div>
-                <!-- Will Probably Want a Table For Results Here -->
+                <!-- Table for Results -->
+                <table id="responses">
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                    </tr>
+
+                    <!-- Loop Through the Users in SQL To Fill Table -->
+                    <% users.forEach(user => { %>
+                        <tr>
+                            <td><%= user.name %></td>
+                            <td><%= user.type %></td>
+                        </tr>
+                    <% }); %>
+                </table>
             </div>
 
         <!-- Link to JavaScript Code -->
-         <script src="Website.js"></script>
+         <script src="/Website.js"></script>
     </body>
 </html>

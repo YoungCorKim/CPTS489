@@ -23,14 +23,14 @@ app.get('/', async function (req, res){
 
     const allUsers = await Users.findAll();
     // Render the Main Page
-    res.render('mainPage', { Users: allUsers });
+    res.render('mainPage', { users: allUsers });
 
     // Check for Login? 
 });
 
-app.get('/calendar', async function (req, res){
+app.get('/login', async function (req, res){
     // Render the Selected Page
-    res.render('calendarPage');
+    res.render('loginPage');
 });
 
 app.get('/calendar', async function (req, res){
@@ -69,9 +69,13 @@ app.get('/groups', async function (req, res){
 });
 
 app.get('/finduser', async function (req, res){
+
     const allUsers = await Users.findAll();
+
+    // const filteredUsers = allUsers.filter(user => userNameCheck("Mar"));
+
     // Render the Selected Page
-    res.render('findUserPage', { Users: allUsers });
+    res.render('findUserPage', { users: allUsers });
 });
 
 app.get('/settings', async function (req, res){
@@ -85,6 +89,14 @@ app.get('/logout', async function (req, res){
 });
 
 // Re-Renders the Page When Needed
+
+app.post('/find', async (req, res) => {
+
+    const { name, type } = req.body;
+    await Users.create({ name, type });
+
+    res.redirect('/finduser');
+});
 
 app.post('/logout', async (req, res) => {
 
