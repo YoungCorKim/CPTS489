@@ -1,0 +1,142 @@
+<!-- The Basic GUI Design For Our Website -->
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <link rel="stylesheet" href="Website.css">
+    </head>
+
+    <body>
+        <div id="mainLayout">
+            <!-- This is the Side Navbar -->
+            <div id="sidebar">
+                <div id="navSpace">
+                    <!-- Replace This With an Icon Eventually... ? -->
+                </div>
+                <button class="sideButton" action="/main">
+                    Home
+                </button>
+                <button class="sideButton" action="/calendar">
+                    Calendars
+                </button>
+                <!-- Professor Only Buttons -->
+                <button class="sideButton" action="/createclass">
+                    Create Class
+                </button>
+                <button class="sideButton" action="/manageclass">
+                    Manage Classes
+                </button>
+                <!-- Utilities For Everyone -->
+                <button class="sideButton" action="/finduser">
+                    Find User
+                </button>
+                <button class="sideButton" action="/settings">
+                    Settings
+                </button>
+                <button class="sideButton" action="/logout">
+                    Log Out
+                </button>
+            </div>
+
+            <!-- Professor Tabs -->
+            <div class="tab" id="createClass">
+                <div>
+                    <div class="p boldFont">
+                        Class Name
+                    </div>
+                    <input type="text" id="className">
+
+                    <div class="p boldFont">
+                        Class Number
+                    </div>
+                    <input type="text" id="classNumber">
+
+                    <div class="p boldFont">
+                        Class Subject
+                    </div>
+                    <!-- Dropdown for Department -->
+                    <select name="Subject" id="subject">
+                        <option value="default">Select Class Subject</option>
+                        <option value="ACC">Accounting</option>
+                        <option value="AERO">Aerospace Engineering</option>
+                        <option value="ART">Art</option>
+                        <option value="BUS">Business</option>
+                        <option value="CHEM">Chemistry</option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="CSEC">Cybersecurity</option>
+                        <option value="ECON">Economics</option>
+                        <option value="PSY">Psychology</option>
+                        <option value="ELC">Electrical Engineering</option>
+                        <option value="ENG">English</option>
+                        <option value="HLTH">Healthcare</option>
+                        <option value="MTH">Mathematics</option>
+                        <option value="MECH">Mechanical Engineering</option>
+                        <option value="PHIL">Philosophy</option>
+                        <option value="PHYS">Physics</option>
+                        <option value="SOC">Sociology</option>
+                        <option value="SE">Software Engineering</option>
+                        <option value="OTH">Other</option>
+                    </select>
+                    
+                    <!-- Dropdown for Days -->
+                    <div id="classDates" class="dateSelect">
+                        <div class="p boldFont">
+                            Days This Class Will Be Held On 
+                        </div>
+                        <div>
+                            <input type="checkbox" id="classMon">
+                            <label for="classMon">Monday</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="classTue">
+                            <label for="classTue">Tuesday</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="classWed">
+                            <label for="classWed">Wednesday</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="classThu">
+                            <label for="classThu">Thursday</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="classFri">
+                            <label for="classFri">Friday</label>
+                        </div>
+                    </div>
+
+                    <!-- Start Date -->
+                    <div class="p boldFont">
+                        Start Date
+                    </div>
+                    <input type="date" id="classStart">
+                    
+                    <!-- End Date -->
+                    <div class="p boldFont">
+                        End Date
+                    </div>
+                    <input type="date" id="classEnd">
+
+                    <!-- Time Slot -->
+                    <div class="p boldFont">
+                        Scheduled Start Time 
+                    </div>
+                    <input type="time" id="classTimeStart">
+                    <div class="p boldFont">
+                        Scheduled End Time
+                    </div>
+                    <input type="time" id="classTimeEnd">
+
+                    <div>
+                    <button class="createButton">
+                        Create Class
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Link to JavaScript Code -->
+         <script src="Website.js"></script>
+    </body>
+</html>

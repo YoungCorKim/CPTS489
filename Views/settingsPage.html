@@ -1,0 +1,108 @@
+<!-- The Basic GUI Design For Our Website -->
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <link rel="stylesheet" href="Website.css">
+    </head>
+
+    <body>
+        <div id="mainLayout">
+            <!-- This is the Side Navbar -->
+            <div id="sidebar">
+                <div id="navSpace">
+                    <!-- Replace This With an Icon Eventually... ? -->
+                </div>
+                <button class="sideButton" action="/main">
+                    Home
+                </button>
+                <button class="sideButton" action="/calendar">
+                    Calendars
+                </button>
+                <!-- These Will Need to Be Professor Only Eventually -->
+                <button class="sideButton" action="/createclass">
+                    Create Class
+                </button>
+                <button class="sideButton" action="/manageclass">
+                    Manage Classes
+                </button>
+                <!-- These Will Only Be A Student View Eventually -->
+                <button class="sideButton" action="/createevent">
+                    Create Event
+                </button>
+                <button class="sideButton" action="/manageevent">
+                    Manage Events
+                </button>
+                <button class="sideButton" action="/import">
+                    Import Schedule
+                </button>
+                <button class="sideButton" action="/groups">
+                    Groups
+                </button>
+                <!-- Utilities For Everyone -->
+                <button class="sideButton" action="/finduser">
+                    Find User
+                </button>
+                <button class="sideButton" action="/settings">
+                    Settings
+                </button>
+                <button class="sideButton" action="/logout">
+                    Log Out
+                </button>
+            </div>
+  
+            <!-- Settings -->
+            <div class="tab" id="settings">
+                <h2 class="settingsTitle">Profile Settings</h2>
+              
+                <div class="formContainer">
+                  <div class="formGroup">
+                    <label for="settingsName">Name</label>
+                    <input type="text" id="settingsName" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsUsername">Username</label>
+                    <input type="text" id="settingsUsername" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsEmail">Email</label>
+                    <input type="email" id="settingsEmail" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsGender">Gender</label>
+                    <select id="settingsGender" class="textBar">
+                      <option value="">Select</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsSchool">School</label>
+                    <input type="text" id="settingsSchool" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsPwd">New Password</label>
+                    <input type="password" id="settingsPwd" class="textBar">
+                  </div>
+              
+                  <div class="formGroup">
+                    <label for="settingsImage">Profile Image</label>
+                    <input type="file" id="settingsImage" accept="image/*" class="textBar">
+                  </div>
+              
+                  <button class="sideButton" id="saveSettings">Save Settings</button>
+                  <p id="settingsStatus"></p>
+                </div>
+            </div>    
+        </div>
+
+        <!-- Link to JavaScript Code -->
+         <script src="Website.js"></script>
+    </body>
+</html>

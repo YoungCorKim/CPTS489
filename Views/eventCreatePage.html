@@ -1,0 +1,93 @@
+<!-- The Basic GUI Design For Our Website -->
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <link rel="stylesheet" href="Website.css">
+    </head>
+
+    <body>
+        <div id="mainLayout">
+            <!-- This is the Side Navbar -->
+            <div id="sidebar">
+                <div id="navSpace">
+                    <!-- Replace This With an Icon Eventually... ? -->
+                </div>
+                <button class="sideButton" action="/main">
+                    Home
+                </button>
+                <button class="sideButton" action="/calendar">
+                    Calendars
+                </button>
+                <!-- These Will Only Be A Student View Eventually -->
+                <button class="sideButton" action="/createevent">
+                    Create Event
+                </button>
+                <button class="sideButton" action="/manageevent">
+                    Manage Events
+                </button>
+                <button class="sideButton" action="/import">
+                    Import Schedule
+                </button>
+                <button class="sideButton" action="/groups">
+                    Groups
+                </button>
+                <!-- Utilities For Everyone -->
+                <button class="sideButton" action="/finduser">
+                    Find User
+                </button>
+                <button class="sideButton" action="/settings">
+                    Settings
+                </button>
+                <button class="sideButton" action="/logout">
+                    Log Out
+                </button>
+            </div>
+
+            <!-- Student Tabs -->
+            <div class="tab" id="createEvent">
+                <div>
+                    <div class="p boldFont">
+                        Event Title
+                    </div>
+                    <input type="text" id="eventName">
+
+                    <!-- Date -->
+                    <div class="p boldFont" id="eventDateText">
+                        Date of Event
+                    </div>
+                    <input type="date" id="eventDate">
+
+                    <!-- Time Slot -->
+                    <div class="p boldFont">
+                        Scheduled Start Time 
+                    </div>
+                    <input type="time" id="eventStartTime">
+                    <div class="p boldFont">
+                        Scheduled End Time
+                    </div>
+                    <input type="time" id="eventEndTime">
+
+                    <!-- Toggle for If Event is Reoccuring -->
+                    <div class="p boldFont">
+                        Is This Event Reoccuring?
+                    </div>
+                    <div id="reoccuringToggle">
+                        <input type="radio" id="reNo" value="default" name="reRadio" onclick="reoccuringEventToggle('off')">
+                        <label for="reNo">No</label>
+                        <input type="radio" id="reYes" value="reoccuring" name="reRadio" onclick="reoccuringEventToggle('on')">
+                        <label for="reYes">Yes</label>
+                    </div>
+                    
+                    <!-- Dropdown for Days -->
+                    <div id="eventDates"></div>
+                    <button class="createButton">
+                        Create Event
+                    </button>
+                </div>
+            </div>
+
+        <!-- Link to JavaScript Code -->
+         <script src="Website.js"></script>
+    </body>
+</html>

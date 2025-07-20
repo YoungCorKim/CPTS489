@@ -1,0 +1,64 @@
+<!-- The Basic GUI Design For Our Website -->
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <link rel="stylesheet" href="Website.css">
+    </head>
+
+    <body>
+        <div id="mainLayout">
+            <!-- This is the Side Navbar -->
+            <div id="sidebar">
+                <div id="navSpace">
+                    <!-- Replace This With an Icon Eventually... ? -->
+                </div>
+                <button class="sideButton" action="/main">
+                    Home
+                </button>
+                <button class="sideButton" action="/calendar">
+                    Calendars
+                </button>
+                <!-- These Will Only Be A Student View Eventually -->
+                <button class="sideButton" action="/createevent">
+                    Create Event
+                </button>
+                <button class="sideButton" action="/manageevent">
+                    Manage Events
+                </button>
+                <button class="sideButton" action="/import">
+                    Import Schedule
+                </button>
+                <button class="sideButton" action="/groups">
+                    Groups
+                </button>
+                <!-- Utilities For Everyone -->
+                <button class="sideButton" action="/finduser">
+                    Find User
+                </button>
+                <button class="sideButton" action="/settings">
+                    Settings
+                </button>
+                <button class="sideButton" action="/logout">
+                    Log Out
+                </button>
+            </div>
+
+            <div class="tab" id="groups">
+                <h2>Your Groups</h2>
+
+               <div id="groupListContainer">
+                    <div class="item">
+                        <span class="group-name">Test</span>
+                        <div class="buttons">
+                            <button onclick="editGroup(1)">Edit</button>
+                            <button onclick="confirmDeleteGroup(1)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Link to JavaScript Code -->
+         <script src="Website.js"></script>
+    </body>
+</html>

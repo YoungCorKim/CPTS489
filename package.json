@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/YoungCorKim/CPTS489#readme",
   "dependencies": {
+    "express": "^5.1.0",
     "ejs": "^3.1.10"
   }
 }

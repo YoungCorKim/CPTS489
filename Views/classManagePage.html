@@ -1,0 +1,60 @@
+<!-- The Basic GUI Design For Our Website -->
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <link rel="stylesheet" href="Website.css">
+    </head>
+
+    <body>
+        <div id="mainLayout">
+            <!-- This is the Side Navbar -->
+            <div id="sidebar">
+                <div id="navSpace">
+                    <!-- Replace This With an Icon Eventually... ? -->
+                </div>
+                <button class="sideButton" action="/main">
+                    Home
+                </button>
+                <button class="sideButton" action="/calendar">
+                    Calendars
+                </button>
+                <!-- Professor Only Buttons -->
+                <button class="sideButton" action="/createclass">
+                    Create Class
+                </button>
+                <button class="sideButton" action="/manageclass">
+                    Manage Classes
+                </button>
+                <!-- Utilities For Everyone -->
+                <button class="sideButton" action="/finduser">
+                    Find User
+                </button>
+                <button class="sideButton" action="/settings">
+                    Settings
+                </button>
+                <button class="sideButton" action="/logout">
+                    Log Out
+                </button>
+            </div>
+
+            <div class="tab" id="manageClass">
+                
+                <!-- checklist and delete/edit, prompt are you sure for delete edit swaps to create-like page with info filled & save/cancel-->
+                <h2>Your Classes</h2>
+
+               <div id="classListContainer">
+                    <div class="item">
+                        <span class="class-name">CPTS489</span>
+                        <div class="buttons">
+                            <button onclick="editClass(1)">Edit</button>
+                            <button onclick="confirmDeleteClass(1)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Link to JavaScript Code -->
+         <script src="Website.js"></script>
+    </body>
+</html>

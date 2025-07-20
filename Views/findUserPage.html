@@ -1,0 +1,72 @@
+<!-- The Basic GUI Design For Our Website -->
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <link rel="stylesheet" href="Website.css">
+    </head>
+
+    <body>
+        <div id="mainLayout">
+            <!-- This is the Side Navbar -->
+            <div id="sidebar">
+                <div id="navSpace">
+                    <!-- Replace This With an Icon Eventually... ? -->
+                </div>
+                <button class="sideButton" action="/main">
+                    Home
+                </button>
+                <button class="sideButton" action="/login">
+                    Login
+                </button>
+                <button class="sideButton" action="/calendar">
+                    Calendars
+                </button>
+                <!-- These Will Need to Be Professor Only Eventually -->
+                <button class="sideButton" action="/createclass">
+                    Create Class
+                </button>
+                <button class="sideButton" action="/manageclass">
+                    Manage Classes
+                </button>
+                <!-- These Will Only Be A Student View Eventually -->
+                <button class="sideButton" action="/createevent">
+                    Create Event
+                </button>
+                <button class="sideButton" action="/manageevent">
+                    Manage Events
+                </button>
+                <button class="sideButton" action="/import">
+                    Import Schedule
+                </button>
+                <button class="sideButton" action="/groups">
+                    Groups
+                </button>
+                <!-- Utilities For Everyone -->
+                <button class="sideButton" action="/finduser">
+                    Find User
+                </button>
+                <button class="sideButton" action="/settings">
+                    Settings
+                </button>
+                <button class="sideButton" action="/logout">
+                    Log Out
+                </button>
+            </div>
+
+            <!-- Utilities -->
+            <div class="tab" id="findUser">
+                <div>
+                    <div id="userSearchText" class="p boldFont">
+                        Search For a User Below
+                    </div>
+                    <input type="text" class="textBar searchBar" id="userSearchBar" placeholder="Enter a Username">
+                    <button id="searchUserButton">Search</button>
+                </div>
+                <!-- Will Probably Want a Table For Results Here -->
+            </div>
+
+        <!-- Link to JavaScript Code -->
+         <script src="Website.js"></script>
+    </body>
+</html>

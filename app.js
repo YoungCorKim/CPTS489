@@ -22,17 +22,110 @@ app.get('/', async function (req, res){
     res.render('mainPage', { Users: allUsers });
 
     // Check for Login? 
-    // const allResponses = await Responses.findAll();
-    // res.render('Survey', { responses: allResponses });
 });
 
+app.get('/calendar', async function (req, res){
+    // Render the Selected Page
+    res.render('calendarPage', { Users: allUsers });
+});
+
+app.get('/calendar', async function (req, res){
+    // Render the Selected Page
+    res.render('calendarPage', { Users: allUsers });
+});
+
+app.get('/class/create', async function (req, res){
+    // Render the Selected Page
+    res.render('classCreatepage', { Users: allUsers });
+});
+
+app.get('/class/manage', async function (req, res){
+    // Render the Selected Page
+    res.render('classManagePage', { Users: allUsers });
+});
+
+app.get('/event/create', async function (req, res){
+    // Render the Selected Page
+    res.render('eventCreatePage', { Users: allUsers });
+});
+
+app.get('/event/manage', async function (req, res){
+    // Render the Selected Page
+    res.render('eventManagePage', { Users: allUsers });
+});
+
+app.get('/import', async function (req, res){
+    // Render the Selected Page
+    res.render('importPage', { Users: allUsers });
+});
+
+app.get('/groups', async function (req, res){
+    // Render the Selected Page
+    res.render('groupPage', { Users: allUsers });
+});
+
+app.get('/finduser', async function (req, res){
+    // Render the Selected Page
+    res.render('findUserPage', { Users: allUsers });
+});
+
+app.get('/settings', async function (req, res){
+    // Render the Selected Page
+    res.render('settingsPage', { Users: allUsers });
+});
+
+app.get('/logout', async function (req, res){
+    // Render the Main Page
+    res.render('/', { Users: allUsers });
+});
+
+// Re-Renders the Page when Sidebar is Pressed
+
+app.post('/home', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/');
+});
+app.post('/calendar', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/calendar');
+});
+app.post('/createclass', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/class/create');
+});
+app.post('/manageclass', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/class/manage');
+});
+app.post('/createevent', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/event/create');
+});
+app.post('/manageevent', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/event/manage');
+});
+app.post('/import', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/import');
+});
+app.post('/groups', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/groups');
+});
+app.post('/finduser', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/finduser');
+});
+app.post('/settings', async (req, res) => {
+    // Send it to the Desired Page Upon Click
+    res.redirect('/settings');
+});
+app.post('/logout', async (req, res) => {
+
+    // Log out User!!
 
 
-// Re-Renders the Page when Submit is Pressed
-app.post('/submit', async (req, res) => {
-    // const { name, major, paradigm, FPlang } = req.body;
-    // await Responses.create({ name, major, paradigm, FPlang });
-
-    // Send it Back to The Main Page After Creating Response
+    // Send it to the Desired Page Upon Click
     res.redirect('/');
 });
