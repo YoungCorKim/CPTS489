@@ -19,7 +19,7 @@ sequelize.sync({ force: true }).then(()=> {
 
 // Defining Setup
 async function setup(){
-    const Users = require('./Users'); 
+    const Users = require('./User'); 
 
     // Edit this to Have Login Information
     const response1 = await Users.create({name: "Martin Blackwood", type: "Student"});

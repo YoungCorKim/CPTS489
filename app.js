@@ -8,6 +8,9 @@ const Professors = require('./Professor');
 // Make it So it Can Read Response Data
 app.use(express.urlencoded({ extended: true }));
 
+// Use Style In App
+app.use(express.static(__dirname + '/public'));
+
 // Gets the Thing to Look in The Views Folder/Can Render .ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
