@@ -84,48 +84,8 @@ app.get('/logout', async function (req, res){
     res.render('/');
 });
 
-// Re-Renders the Page when Sidebar is Pressed
+// Re-Renders the Page When Needed
 
-app.post('/home', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/');
-});
-app.post('/calendar', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/calendar');
-});
-app.post('/createclass', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/class/create');
-});
-app.post('/manageclass', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/class/manage');
-});
-app.post('/createevent', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/event/create');
-});
-app.post('/manageevent', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/event/manage');
-});
-app.post('/import', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/import');
-});
-app.post('/groups', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/groups');
-});
-app.post('/finduser', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/finduser');
-});
-app.post('/settings', async (req, res) => {
-    // Send it to the Desired Page Upon Click
-    res.redirect('/settings');
-});
 app.post('/logout', async (req, res) => {
 
     // Log out User!!

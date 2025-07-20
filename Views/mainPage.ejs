@@ -10,40 +10,46 @@
         <div id="mainLayout">
             <!-- This is the Side Navbar -->
             <div id="sidebar">
+                <div id="navSpace">
+                    <!-- Replace This With an Icon Eventually... ? -->
+                </div>
                 <button class="sideButton" action="/main">
                     Home
                 </button>
-                <button class="sideButton" action="/login">
+                <button class="sideButton" onclick="location.href='/'">
+                    Home
+                </button>
+                <button class="sideButton" onclick="location.href='/login'">
                     Login
                 </button>
-                <button class="sideButton" action="/calendar">
+                <button class="sideButton" onclick="location.href='/calendar'">
                     Calendars
                 </button>
                 <!-- These Will Need to Be Professor Only Eventually -->
-                <button class="sideButton" action="/createclass">
+                <button class="sideButton" onclick="location.href='/class/create'">
                     Create Class
                 </button>
-                <button class="sideButton" action="/manageclass">
+                <button class="sideButton" onclick="location.href='/class/manage'">
                     Manage Classes
                 </button>
                 <!-- These Will Only Be A Student View Eventually -->
-                <button class="sideButton" action="/createevent">
+                <button class="sideButton" onclick="location.href='/event/create'">
                     Create Event
                 </button>
-                <button class="sideButton" action="/manageevent">
+                <button class="sideButton" onclick="location.href='/event/manage'">
                     Manage Events
                 </button>
-                <button class="sideButton" action="/import">
+                <button class="sideButton" onclick="location.href='/import'">
                     Import Schedule
                 </button>
-                <button class="sideButton" action="/groups">
+                <button class="sideButton" onclick="location.href='/groups'">
                     Groups
                 </button>
                 <!-- Utilities For Everyone -->
-                <button class="sideButton" action="/finduser">
+                <button class="sideButton" onclick="location.href='/finduser'">
                     Find User
                 </button>
-                <button class="sideButton" action="/settings">
+                <button class="sideButton" onclick="location.href='/settings'">
                     Settings
                 </button>
             </div>

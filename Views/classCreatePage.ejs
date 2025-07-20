@@ -12,25 +12,28 @@
             <div id="sidebar">
                 <div id="navSpace">
                     <!-- Replace This With an Icon Eventually... ? -->
-                </div>
-                <button class="sideButton" action="/main">
+                </div>                
+                <button class="sideButton" onclick="location.href='/'">
                     Home
                 </button>
-                <button class="sideButton" action="/calendar">
+                <button class="sideButton" onclick="location.href='/login'">
+                    Login
+                </button>
+                <button class="sideButton" onclick="location.href='/calendar'">
                     Calendars
                 </button>
-                <!-- Professor Only Buttons -->
-                <button class="sideButton" action="/createclass">
+                <!-- These Will Need to Be Professor Only Eventually -->
+                <button class="sideButton" onclick="location.href='/class/create'">
                     Create Class
                 </button>
-                <button class="sideButton" action="/manageclass">
+                <button class="sideButton" onclick="location.href='/class/manage'">
                     Manage Classes
                 </button>
                 <!-- Utilities For Everyone -->
-                <button class="sideButton" action="/finduser">
+                <button class="sideButton" onclick="location.href='/finduser'">
                     Find User
                 </button>
-                <button class="sideButton" action="/settings">
+                <button class="sideButton" onclick="location.href='/settings'">
                     Settings
                 </button>
                 <button class="sideButton" action="/logout">
