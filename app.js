@@ -18,6 +18,7 @@ app.listen(3000, function() {});
 app.get('/', async function (req, res){
     // Find a Way to Filter for Notifications
 
+    const allUsers = await Users.findAll();
     // Render the Main Page
     res.render('mainPage', { Users: allUsers });
 
@@ -26,57 +27,58 @@ app.get('/', async function (req, res){
 
 app.get('/calendar', async function (req, res){
     // Render the Selected Page
-    res.render('calendarPage', { Users: allUsers });
+    res.render('calendarPage');
 });
 
 app.get('/calendar', async function (req, res){
     // Render the Selected Page
-    res.render('calendarPage', { Users: allUsers });
+    res.render('calendarPage');
 });
 
 app.get('/class/create', async function (req, res){
     // Render the Selected Page
-    res.render('classCreatepage', { Users: allUsers });
+    res.render('classCreatepage');
 });
 
 app.get('/class/manage', async function (req, res){
     // Render the Selected Page
-    res.render('classManagePage', { Users: allUsers });
+    res.render('classManagePage');
 });
 
 app.get('/event/create', async function (req, res){
     // Render the Selected Page
-    res.render('eventCreatePage', { Users: allUsers });
+    res.render('eventCreatePage');
 });
 
 app.get('/event/manage', async function (req, res){
     // Render the Selected Page
-    res.render('eventManagePage', { Users: allUsers });
+    res.render('eventManagePage');
 });
 
 app.get('/import', async function (req, res){
     // Render the Selected Page
-    res.render('importPage', { Users: allUsers });
+    res.render('importPage');
 });
 
 app.get('/groups', async function (req, res){
     // Render the Selected Page
-    res.render('groupPage', { Users: allUsers });
+    res.render('groupPage');
 });
 
 app.get('/finduser', async function (req, res){
+    const allUsers = await Users.findAll();
     // Render the Selected Page
     res.render('findUserPage', { Users: allUsers });
 });
 
 app.get('/settings', async function (req, res){
     // Render the Selected Page
-    res.render('settingsPage', { Users: allUsers });
+    res.render('settingsPage');
 });
 
 app.get('/logout', async function (req, res){
     // Render the Main Page
-    res.render('/', { Users: allUsers });
+    res.render('/');
 });
 
 // Re-Renders the Page when Sidebar is Pressed

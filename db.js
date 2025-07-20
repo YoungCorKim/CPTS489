@@ -22,7 +22,7 @@ async function setup(){
     const Users = require('./Users'); 
 
     // Edit this to Have Login Information
-    const response1 = await Users.create({name: "Martin Blackwood", major: "Mechanical Engineering", paradigm: "Functional", FPlang: "N/A"});
+    const response1 = await Users.create({name: "Martin Blackwood", type: "Student"});
 
     //Create a Student/Professor Database Too
 }
