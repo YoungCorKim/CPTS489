@@ -1,0 +1,23 @@
+{
+  "name": "cpts489",
+  "version": "1.0.0",
+  "description": "repo for 489 team project",
+  "main": "Website.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoungCorKim/CPTS489.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoungCorKim/CPTS489/issues"
+  },
+  "homepage": "https://github.com/YoungCorKim/CPTS489#readme",
+  "dependencies": {
+    "ejs": "^3.1.10"
+  }
+}

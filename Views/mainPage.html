@@ -1,0 +1,81 @@
+<!-- The Basic GUI Design For Our Website -->
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <link rel="stylesheet" href="Website.css">
+    </head>
+
+    <body>
+        <div id="mainLayout">
+            <!-- This is the Side Navbar -->
+            <div id="sidebar">
+                <button class="sideButton" action="/main">
+                    Home
+                </button>
+                <button class="sideButton" action="/login">
+                    Login
+                </button>
+                <button class="sideButton" action="/calendar">
+                    Calendars
+                </button>
+                <!-- These Will Need to Be Professor Only Eventually -->
+                <button class="sideButton" action="/createclass">
+                    Create Class
+                </button>
+                <button class="sideButton" action="/manageclass">
+                    Manage Classes
+                </button>
+                <!-- These Will Only Be A Student View Eventually -->
+                <button class="sideButton" action="/createevent">
+                    Create Event
+                </button>
+                <button class="sideButton" action="/manageevent">
+                    Manage Events
+                </button>
+                <button class="sideButton" action="/import">
+                    Import Schedule
+                </button>
+                <button class="sideButton" action="/groups">
+                    Groups
+                </button>
+                <!-- Utilities For Everyone -->
+                <button class="sideButton" action="/finduser">
+                    Find User
+                </button>
+                <button class="sideButton" action="/settings">
+                    Settings
+                </button>
+            </div>
+            <!-- Each Of These is a Tab and Is Set to None Display So It Is Hidden -->
+
+            <!-- Main Tabs -->
+            <div class="tab" id="home">
+                <!-- Probably Want a List of Events For Today & Times As Well as Notification Bank -->
+                 <div id="eventsToday">
+                    <div id="eventTitle">Today's Events</div>
+                    <div class="eventText">Event 1</div>
+                    <div class="eventText">Event 2</div>
+                    <div class="eventText">Event 3</div>
+                 </div>
+                 <div id="homeNotifications">
+                    <div id="notificationTitle">Notifications</div>
+                    <div class="notificationText">
+                        Notification 1
+                        <button class="notificationDismiss">Dismiss</button>
+                    </div>
+                    <div class="notificationText">
+                        Notification 2
+                        <button class="notificationDismiss">Dismiss</button>
+                    </div>
+                    <div class="notificationText">
+                        Notification 3
+                        <button class="notificationDismiss">Dismiss</button>
+                    </div>
+                 </div>
+            </div>
+
+        <!-- Link to JavaScript Code -->
+         <script src="Website.js"></script>
+    </body>
+</html>
