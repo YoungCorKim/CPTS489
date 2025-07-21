@@ -127,8 +127,3 @@ app.post('/find', async (req, res) => {
 
     res.redirect('/finduser');
 });
-
-app.post('/logout', async (req, res) => {
-    // Lpg Out User (Send to Page Without Buttons)
-    res.redirect('/');
-});
