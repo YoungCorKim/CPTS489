@@ -55,40 +55,37 @@
             </div>
             <!-- Each Of These is a Tab and Is Set to None Display So It Is Hidden -->
 
-            <!-- Main Tabs -->
-            <div class="tab" id="login">
+            <!-- Registration Tab -->
+            <div class="tab" id="register">
                 <div>
                     <div class="p boldFont">
-                        Enter Your Username or Email
+                        Enter Your Email
                     </div>
-                    <input type="text" class="textBar loginBar" id="username">
+                    <input type="text" class="textBar loginBar" id="emailReg">
+                    <div class="p boldFont">
+                        Enter a Username
+                    </div>
+                    <input type="text" class="textBar loginBar" id="usernameReg">
+                    <!-- Username Taken Error Text -->
+                    <div id="usernameTakenError" style="display: none;"></div>
                     <div class="p boldFont">
                         Enter Your Password
                     </div>
-                    <!-- Type Password Makes It * -->
-                    <input type="password" class="textBar loginBar" id="password">
-                    <div>
-                        <!-- Show/Hide Password Toggle -->
-                        <input type="checkbox" id="passwordToggle" onchange="passwordToggle()">
-                        <label for="passwordToggle">Show Password</label>
+                    <input type="text" class="textBar loginBar" id="passwordReg1">
+                    <div class="p boldFont">
+                        Confirm Your Password
                     </div>
-                    <!-- Login Error Text -->
-                    <div id="loginErrorText" style="display: none;"></div>
+                    <input type="text" class="textBar loginBar" id="passwordReg2">
+                    <!-- Password Mismatch Error Text -->
+                    <div id="passwordMismatchError" style="display: none;"></div>
                 </div>
-                <button class="loginButton" onclick="loginCheck()">
-                        Login
+                <button class="loginButton" onclick="signUpCheck()">
+                        Sign Up
                 </button>
                 <div>
-                    <div class="p smallFont">
-                        Don't have an account? Sign up
-                        <button class="registerButton" onclick="location.href='/register'">
-                            here
-                        </button>
-                    </div>
-                </div>
             </div>
 
         <!-- Link to JavaScript Code -->
-         <script src="Website.js"></script>
+         <script src="register.js"></script>
     </body>
 </html>

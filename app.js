@@ -33,6 +33,11 @@ app.get('/login', async function (req, res){
     res.render('loginPage');
 });
 
+app.get('/register', async function (req, res){
+    // Render the Selected Page
+    res.render('registerPage');
+});
+
 app.get('/calendar', async function (req, res){
     // Render the Selected Page
     res.render('calendarPage');
