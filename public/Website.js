@@ -1,26 +1,3 @@
-// Login Confirmation
-function loginCheck(){
-    var usernameText = document.getElementById("username").value;
-    var passwordText = document.getElementById("password").value;
-
-    // Check if User/Password is In System
-    // Impliment At Later Date
-    if(false){
-
-    }
-    // Alert User if Information is Incorrect With Text Under Login
-    else{
-        // Get Error Text
-        var errorText = document.getElementById("loginErrorText");
-
-        // Change Error Text
-        errorText.innerHTML = [`${"Your Username or Password is Incorrect"}`]
-
-        // Make Text Visible
-        errorText.style.display = "flex";
-    }
-}
-
 // Show Password Function
 function passwordToggle(){
     var toggle = document.getElementById("passwordToggle");

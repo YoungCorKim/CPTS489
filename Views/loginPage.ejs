@@ -22,63 +22,34 @@
                 <button class="sideButton" onclick="location.href='/register'">
                     Register
                 </button>
-                <button class="sideButton" onclick="location.href='/calendar'">
-                    Calendars
-                </button>
-                <!-- These Will Need to Be Professor Only Eventually -->
-                <button class="sideButton" onclick="location.href='/class/create'">
-                    Create Class
-                </button>
-                <button class="sideButton" onclick="location.href='/class/manage'">
-                    Manage Classes
-                </button>
-                <!-- These Will Only Be A Student View Eventually -->
-                <button class="sideButton" onclick="location.href='/event/create'">
-                    Create Event
-                </button>
-                <button class="sideButton" onclick="location.href='/event/manage'">
-                    Manage Events
-                </button>
-                <button class="sideButton" onclick="location.href='/import'">
-                    Import Schedule
-                </button>
-                <button class="sideButton" onclick="location.href='/groups'">
-                    Groups
-                </button>
-                <!-- Utilities For Everyone -->
-                <button class="sideButton" onclick="location.href='/finduser'">
-                    Find User
-                </button>
-                <button class="sideButton" onclick="location.href='/settings'">
-                    Settings
-                </button>
             </div>
             <!-- Each Of These is a Tab and Is Set to None Display So It Is Hidden -->
 
             <!-- Main Tabs -->
             <div class="tab" id="login">
-                <div>
-                    <div class="p boldFont">
-                        Enter Your Username or Email
-                    </div>
-                    <input type="text" class="textBar loginBar" id="username">
-                    <div class="p boldFont">
-                        Enter Your Password
-                    </div>
-                    <!-- Type Password Makes It * -->
-                    <input type="password" class="textBar loginBar" id="password">
+
+                <form id="login" method="POST" action="/logincheck">
                     <div>
-                        <!-- Show/Hide Password Toggle -->
-                        <input type="checkbox" id="passwordToggle" onchange="passwordToggle()">
-                        <label for="passwordToggle">Show Password</label>
+                        <div class="p boldFont">
+                            Enter Your Username or Email
+                        </div>
+                        <input type="text" class="textBar loginBar" id="username" name="username" required>
+                        <div class="p boldFont">
+                            Enter Your Password
+                        </div>
+                        <!-- Type Password Makes It * -->
+                        <input type="password" class="textBar loginBar" id="password" name="password" required>
+                        <div>
+                            <!-- Show/Hide Password Toggle -->
+                            <input type="checkbox" id="passwordToggle" onchange="passwordToggle()">
+                            <label for="passwordToggle">Show Password</label>
+                        </div>
+
                     </div>
-                    <!-- Login Error Text -->
-                    <div id="loginErrorText" style="display: none;"></div>
-                </div>
-                <button class="loginButton" onclick="loginCheck()">
+                    <button class="loginButton" type="submit">
                         Login
-                </button>
-                <div>
+                    </button>
+                </form>
                     <div class="p smallFont">
                         Don't have an account? Sign up
                         <button class="registerButton" onclick="location.href='/register'">

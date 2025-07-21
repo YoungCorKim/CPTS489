@@ -1,0 +1,42 @@
+<!-- The Basic GUI Design For Our Website -->
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <link rel="stylesheet" href="/style.css" text="text/css">
+    </head>
+
+    <body>
+        <div id="mainLayout">
+            <!-- This is the Side Navbar -->
+            <div id="sidebar">
+                <div id="navSpace">
+                    <!-- Replace This With an Icon Eventually... ? -->
+                </div>
+                <button class="sideButton" onclick="location.href='/'">
+                    Home
+                </button>
+                <button class="sideButton" onclick="location.href='/login'">
+                    Login
+                </button>
+                <button class="sideButton" onclick="location.href='/register'">
+                    Register
+                </button>
+            </div>
+            <!-- Each Of These is a Tab and Is Set to None Display So It Is Hidden -->
+
+            <!-- Main Tabs -->
+            <div class="tab" id="home">
+                <!-- Probably Want a List of Events For Today & Times As Well as Notification Bank -->
+                 <div id="eventsToday">
+                    <div id="eventTitle">Today's Events</div>
+                 </div>
+                 <div id="homeNotifications">
+                    <div id="notificationTitle">Notifications</div>
+                 </div>
+            </div>
+
+        <!-- Link to JavaScript Code -->
+         <script src="Website.js"></script>
+    </body>
+</html>

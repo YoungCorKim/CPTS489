@@ -20,11 +20,21 @@ sequelize.sync({ force: true }).then(()=> {
 // Defining Setup
 async function setup(){
     const Users = require('./User'); 
+    // Base Account for Demo
+    const response1 = await Users.create({name: "Martin Blackwood", type: "Student", username: "TheLonely", password: "Archivist"});
+}
 
-    // Edit this to Have Login Information
-    const response1 = await Users.create({name: "Martin Blackwood", type: "Student"});
-
-    //Create a Student/Professor Database Too
+function getRow(sql, values){
+    return new Promise((resolve, reject) =>{
+        db.get(sql, ['John', '1248'], (err, row) => {
+            if (err){
+                reject(err);
+            }
+            else{
+                resolve(row);
+            }
+        })
+    });
 }
 
 // Sequalize Export
