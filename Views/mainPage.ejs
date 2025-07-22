@@ -1,84 +1,56 @@
-<!-- The Basic GUI Design For Our Website -->
-
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <link rel="stylesheet" href="/style.css" text="text/css">
-    </head>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+<body>
+    <div id="mainLayout">
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div id="navSpace"></div>
+            <button class="sideButton" onclick="location.href='/'">Home</button>
+            <button class="sideButton" onclick="location.href='/calendar'">Calendars</button>
+            <button class="sideButton" onclick="location.href='/class/create'">Create Class</button>
+            <button class="sideButton" onclick="location.href='/class/manage'">Manage Classes</button>
+            <button class="sideButton" onclick="location.href='/event/create'">Create Event</button>
+            <button class="sideButton" onclick="location.href='/event/manage'">Manage Events</button>
+            <button class="sideButton" onclick="location.href='/import'">Import Schedule</button>
+            <button class="sideButton" onclick="location.href='/groups'">Groups</button>
+            <button class="sideButton" onclick="location.href='/finduser'">Find User</button>
+            <button class="sideButton" onclick="location.href='/settings'">Settings</button>
+            <button class="sideButton" onclick="location.href='/'">Log Out</button>
+        </div>
 
-    <body>
-        <div id="mainLayout">
-            <!-- This is the Side Navbar -->
-            <div id="sidebar">
-                <div id="navSpace">
-                    <!-- Replace This With an Icon Eventually... ? -->
+        <!-- Main Content -->
+        <div class="tab" id="home">
+            <!-- Events Today -->
+            <div id="eventsToday">
+                <div id="eventTitle">Today's Events</div>
+                <div class="eventText">Event 1</div>
+                <div class="eventText">Event 2</div>
+                <div class="eventText">Event 3</div>
+            </div>
+
+            <!-- Notifications -->
+            <div id="homeNotifications">
+                <div id="notificationTitle">Notifications</div>
+                <div class="notification">
+                    <span>Notification 1</span>
+                    <button class="dismiss-btn">Dismiss</button>
                 </div>
-                <button class="sideButton" onclick="location.href='/'">
-                    Home
-                </button>
-                <button class="sideButton" onclick="location.href='/calendar'">
-                    Calendars
-                </button>
-                <!-- These Will Need to Be Professor Only Eventually -->
-                <button class="sideButton" onclick="location.href='/class/create'">
-                    Create Class
-                </button>
-                <button class="sideButton" onclick="location.href='/class/manage'">
-                    Manage Classes
-                </button>
-                <!-- These Will Only Be A Student View Eventually -->
-                <button class="sideButton" onclick="location.href='/event/create'">
-                    Create Event
-                </button>
-                <button class="sideButton" onclick="location.href='/event/manage'">
-                    Manage Events
-                </button>
-                <button class="sideButton" onclick="location.href='/import'">
-                    Import Schedule
-                </button>
-                <button class="sideButton" onclick="location.href='/groups'">
-                    Groups
-                </button>
-                <!-- Utilities For Everyone -->
-                <button class="sideButton" onclick="location.href='/finduser'">
-                    Find User
-                </button>
-                <button class="sideButton" onclick="location.href='/settings'">
-                    Settings
-                </button>
-                <button class="sideButton" onclick="location.href='/'">
-                    Log Out
-                </button>
+                <div class="notification">
+                    <span>Notification 2</span>
+                    <button class="dismiss-btn">Dismiss</button>
+                </div>
+                <div class="notification">
+                    <span>Notification 3</span>
+                    <button class="dismiss-btn">Dismiss</button>
+                </div>
             </div>
-            <!-- Each Of These is a Tab and Is Set to None Display So It Is Hidden -->
+        </div>
+    </div>
 
-            <!-- Main Tabs -->
-            <div class="tab" id="home">
-                <!-- Probably Want a List of Events For Today & Times As Well as Notification Bank -->
-                 <div id="eventsToday">
-                    <div id="eventTitle">Today's Events</div>
-                    <div class="eventText">Event 1</div>
-                    <div class="eventText">Event 2</div>
-                    <div class="eventText">Event 3</div>
-                 </div>
-                 <div id="homeNotifications">
-                    <div id="notificationTitle">Notifications</div>
-                    <div class="notificationText">
-                        Notification 1
-                        <button class="notificationDismiss">Dismiss</button>
-                    </div>
-                    <div class="notificationText">
-                        Notification 2
-                        <button class="notificationDismiss">Dismiss</button>
-                    </div>
-                    <div class="notificationText">
-                        Notification 3
-                        <button class="notificationDismiss">Dismiss</button>
-                    </div>
-                 </div>
-            </div>
-
-        <!-- Link to JavaScript Code -->
-         <script src="Website.js"></script>
-    </body>
+    <!-- Script -->
+    <script src="/Website.js"></script>
+</body>
 </html>

@@ -1,61 +1,52 @@
 <!-- The Basic GUI Design For Our Website -->
-
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <link rel="stylesheet" href="/style.css" text="text/css">
-    </head>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/style.css" text="text/css">
+    <title>Register</title>
+  </head>
 
-    <body>
-        <div id="mainLayout">
-            <!-- This is the Side Navbar -->
-            <div id="sidebar">
-                <div id="navSpace">
-                    <!-- Replace This With an Icon Eventually... ? -->
-                </div>
-                <button class="sideButton" onclick="location.href='/'">
-                    Home
-                </button>
-                <button class="sideButton" onclick="location.href='/login'">
-                    Login
-                </button>
-                <button class="sideButton" onclick="location.href='/register'">
-                    Register
-                </button>
+  <body>
+    <div id="mainLayout">
+      <!-- This is the Side Navbar -->
+      <div id="sidebar">
+        <div id="navSpace">
+          <!-- Replace This With an Icon Eventually... ? -->
+        </div>
+        <button class="sideButton" onclick="location.href='/'">Home</button>
+        <button class="sideButton" onclick="location.href='/login'">Login</button>
+        <button class="sideButton" onclick="location.href='/register'">Register</button>
+      </div>
+
+      <!-- Registration Tab -->
+      <div class="tab" id="register">
+        <form action="/register" method="POST">
+          <div>
+            <div class="p boldFont">Enter Your Email</div>
+            <input type="text" class="textBar loginBar" name="name" required>
+
+            <div class="p boldFont">Enter a Username</div>
+            <input type="text" class="textBar loginBar" name="username" required>
+
+            <div class="p boldFont">Enter Your Password</div>
+            <input type="password" class="textBar loginBar" name="password" required>
+
+            <div class="p boldFont">Confirm Your Password</div>
+            <input type="password" class="textBar loginBar" name="confirmPassword" required>
+          </div>
+
+          <% if (message) { %>
+            <div style="margin-top: 10px; color: <%= success ? 'green' : 'red' %>;">
+              <%= message %>
             </div>
-            <!-- Each Of These is a Tab and Is Set to None Display So It Is Hidden -->
+          <% } %>
 
-            <!-- Registration Tab -->
-            <div class="tab" id="register">
-                <div>
-                    <div class="p boldFont">
-                        Enter Your Email
-                    </div>
-                    <input type="text" class="textBar loginBar" id="emailReg">
-                    <div class="p boldFont">
-                        Enter a Username
-                    </div>
-                    <input type="text" class="textBar loginBar" id="usernameReg">
-                    <!-- Username Taken Error Text -->
-                    <div id="usernameTakenError" style="display: none;"></div>
-                    <div class="p boldFont">
-                        Enter Your Password
-                    </div>
-                    <input type="text" class="textBar loginBar" id="passwordReg1">
-                    <div class="p boldFont">
-                        Confirm Your Password
-                    </div>
-                    <input type="text" class="textBar loginBar" id="passwordReg2">
-                    <!-- Password Mismatch Error Text -->
-                    <div id="passwordMismatchError" style="display: none;"></div>
-                </div>
-                <button class="loginButton" onclick="signUpCheck()">
-                        Sign Up
-                </button>
-                <div>
-            </div>
+          <button type="submit" class="loginButton">Sign Up</button>
+        </form>
+      </div>
+    </div>
 
-        <!-- Link to JavaScript Code -->
-         <script src="register.js"></script>
-    </body>
+    <!-- Link to JS if needed -->
+    <script src="/register.js"></script>
+  </body>
 </html>

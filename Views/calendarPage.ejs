@@ -1,95 +1,84 @@
-<!-- The Basic GUI Design For Our Website -->
-
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <link rel="stylesheet" href="/style.css" text="text/css">
-    </head>
+<html lang="en">
+<head>
+    <title>My Calendar</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
 
-    <body>
-        <div id="mainLayout">
-            <!-- This is the Side Navbar -->
-            <div id="sidebar">
-                <div id="navSpace">
-                    <!-- Replace This With an Icon Eventually... ? -->
+<body>
+    <div id="mainLayout">
+        <!-- Sidebar Navigation -->
+        <div id="sidebar">
+            <div id="navSpace"></div>
+            <button class="sideButton" onclick="location.href='/home'">Home</button>
+            <button class="sideButton" onclick="location.href='/calendar/view'">Calendars</button>
+            <button class="sideButton" onclick="location.href='/class/create'">Create Class</button>
+            <button class="sideButton" onclick="location.href='/class/manage'">Manage Classes</button>
+            <button class="sideButton" onclick="location.href='/event/create'">Create Event</button>
+            <button class="sideButton" onclick="location.href='/event/manage'">Manage Events</button>
+            <button class="sideButton" onclick="location.href='/import'">Import Schedule</button>
+            <button class="sideButton" onclick="location.href='/groups'">Groups</button>
+            <button class="sideButton" onclick="location.href='/finduser'">Find User</button>
+            <button class="sideButton" onclick="location.href='/settings'">Settings</button>
+            <button class="sideButton" onclick="location.href='/'">Log Out</button>
+        </div>
+
+        <!-- Calendar Layout -->
+        <div class="tab" id="calendars">
+            <div class="calendar">
+                <div class="calHeader">
+                    <div id="currentMonthYear">Month Year</div>
+                    <button id="back"><</button>
+                    <button id="next">></button>
                 </div>
-                <button class="sideButton" onclick="location.href='/home'">
-                    Home
-                </button>
-                <button class="sideButton" onclick="location.href='/calendar'">
-                    Calendars
-                </button>
-                <!-- These Will Need to Be Professor Only Eventually -->
-                <button class="sideButton" onclick="location.href='/class/create'">
-                    Create Class
-                </button>
-                <button class="sideButton" onclick="location.href='/class/manage'">
-                    Manage Classes
-                </button>
-                <!-- These Will Only Be A Student View Eventually -->
-                <button class="sideButton" onclick="location.href='/event/create'">
-                    Create Event
-                </button>
-                <button class="sideButton" onclick="location.href='/event/manage'">
-                    Manage Events
-                </button>
-                <button class="sideButton" onclick="location.href='/import'">
-                    Import Schedule
-                </button>
-                <button class="sideButton" onclick="location.href='/groups'">
-                    Groups
-                </button>
-                <!-- Utilities For Everyone -->
-                <button class="sideButton" onclick="location.href='/finduser'">
-                    Find User
-                </button>
-                <button class="sideButton" onclick="location.href='/settings'">
-                    Settings
-                </button>
-                <button class="sideButton" onclick="location.href='/'">
-                    Log Out
-                </button>
-            </div>
-            <!-- Main Tabs -->
-            <div class="tab" id="calendars">
-                <!-- Calendar Code -->
-                <div class="calendar">
-                    <div class="calHeader">
-                        <div id="currentMonthYear">Month Year</div>
-                        <button id="back"><</button>
-                        <button id="next">></button>
+                <div class="calBody">
+                    <div class="calWeekdays">
+                        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+                        <div>Thu</div><div>Fri</div><div>Sat</div>
                     </div>
-                    <div class="calBody">
-                        <div class="calWeekdays">
-                            <div>Sun</div>
-                            <div>Mon</div>
-                            <div>Tue</div>
-                            <div>Wed</div>
-                            <div>Thu</div>
-                            <div>Fri</div>
-                            <div>Sat</div>
-                        </div>
-                        <div class="calDates" id="calDates"></div>
-                    </div>
-                </div>
-                <!-- Toggles For Which Calendars To Show -->
-                <div class="calKey">
-                    <div>
-                        <input type="checkbox" id="exToggle1">
-                        <label for="exToggle">Example Calendar 1</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="exToggle2">
-                        <label for="exToggle">Example Calendar 2</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="exToggle3">
-                        <label for="exToggle">Example Calendar 3</label>
-                    </div>
+                    <div class="calDates" id="calDates"></div>
                 </div>
             </div>
 
-        <!-- Link to JavaScript Code -->
-         <script src="/calendar.js"></script>
-    </body>
+            <!-- Example Calendar Toggles -->
+            <div class="calKey">
+                <div><input type="checkbox" id="exToggle1"><label for="exToggle1">Example Calendar 1</label></div>
+                <div><input type="checkbox" id="exToggle2"><label for="exToggle2">Example Calendar 2</label></div>
+                <div><input type="checkbox" id="exToggle3"><label for="exToggle3">Example Calendar 3</label></div>
+            </div>
+
+            <!-- Imported Schedules Table -->
+            <div style="margin: 20px;">
+                <h2>Imported Schedules</h2>
+                <table border="1" cellpadding="8">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (schedules.length === 0) { %>
+                            <tr><td colspan="4">No schedules found.</td></tr>
+                        <% } else { %>
+                            <% schedules.forEach(s => { %>
+                                <tr>
+                                    <td><%= s.userId %></td>
+                                    <td><%= new Date(s.startTime).toLocaleString() %></td>
+                                    <td><%= new Date(s.endTime).toLocaleString() %></td>
+                                    <td><%= s.title %></td>
+                                </tr>
+                            <% }) %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/calendar.js"></script>
+</body>
 </html>
